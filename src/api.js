@@ -18,8 +18,17 @@ const app = express()
 // Middlewares
 // -------------------------------------------------------------------------------------------------- //
 
+const checkUserCredentials = require('./middlewares/check-user-credentials')
+
 app.use(cors())
-app.use(express.json())
+app.use(express.json()) // Understand the JSON sended by the API
+
+// -------------------------------------------------------------------------------------------------- //
+// Controllers
+// -------------------------------------------------------------------------------------------------- //
+
+// Security
+const refresh = require('./controllers/auth/refresh')
 
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
