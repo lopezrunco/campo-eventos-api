@@ -41,7 +41,7 @@ const enableMfa = require('./controllers/auth/enable-mfa')
 // app.post('/auction/edit/:id', playAuction)
 // app.get('/auction/history', getAuctionsHistory)
 
-// Iuse the imported credentials to connect to the database
+// Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         app.listen(process.env.PORT) // Start to listen for connections

@@ -1,9 +1,9 @@
 {
   "name": "campoeventos-api",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
-    "start": "nodemon src/api.js",
+    "start": "node src/api.js",
+    "dev": "nodemon src/api.js",
     "seed": "node src/commands/seeder.js"
   },
   "author": "Damian Lopez",
@@ -21,6 +21,7 @@
     "qrcode": "^1.5.1"
   },
   "devDependencies": {
+    "faker": "^5.5.3",
     "nodemon": "^2.0.22"
   }
 }
