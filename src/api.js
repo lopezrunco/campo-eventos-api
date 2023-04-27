@@ -31,9 +31,17 @@ app.use(express.json()) // Understand the JSON sended by the API
 const refresh = require('./controllers/auth/refresh')
 const enableMfa = require('./controllers/auth/enable-mfa')
 
+// Users
+const login = require('./controllers/user/login')
+const register = require('./controllers/user/register')
+
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
 // -------------------------------------------------------------------------------------------------- //
+
+// Users
+app.post('/login', login)
+app.post('/register', register)
 
 // Remates
 // app.post('/auction/create', createAuction)
