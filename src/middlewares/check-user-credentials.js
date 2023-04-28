@@ -13,7 +13,8 @@ module.exports = (tokenType = 'CONSUMER') => {
                 request.user = {
                     id: decoded.id,
                     name: decoded.name,
-                    email: decoded.email
+                    email: decoded.email,
+                    role: decoded.role
                 }
                 // Inserts the token info in the request, so we can access to it after the middleware
                 request.token = {

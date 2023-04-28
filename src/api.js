@@ -4,7 +4,7 @@ const mongoose = require('mongoose') // MongoDB mapper
 const mongooseToJson = require('@meanie/mongoose-to-json') // Cleans the requeston _id & __v fields
 const express = require('express')
 const cors = require('cors') // Allows connections between the same IP
-const getDbConnectionString  = require('./utils/get-db-connection-string') // Returns the conection string
+const getDbConnectionString = require('./utils/get-db-connection-string') // Returns the conection string
 
 mongoose.plugin(mongooseToJson) // Loads the mongooseToJson plugin in mongoose
 
@@ -20,7 +20,7 @@ const app = express()
 
 const checkUserCredentials = require('./middlewares/check-user-credentials')
 
-app.use(cors())
+app.use(cors()) // Cors returns middleware function that opens the API in security terms, to connect the front-end (Allow conections between the same IP)
 app.use(express.json()) // Understand the JSON sended by the API
 
 // -------------------------------------------------------------------------------------------------- //
@@ -34,6 +34,8 @@ const enableMfa = require('./controllers/auth/enable-mfa')
 // Users
 const login = require('./controllers/user/login')
 const register = require('./controllers/user/register')
+const getAllUsers = require('./controllers/user/get-all')
+const getUserById = require('./controllers/user/get-by-id')
 
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
@@ -42,8 +44,10 @@ const register = require('./controllers/user/register')
 // Users
 app.post('/login', login)
 app.post('/register', register)
+app.get('/admin/users', checkUserCredentials(), getAllUsers)
+app.get('/admin/users/:id', checkUserCredentials(), getUserById)
 
-// Remates
+// Events
 // app.post('/auction/create', createAuction)
 // app.get('/auction/open/:id', getAuctionById)
 // app.post('/auction/edit/:id', playAuction)

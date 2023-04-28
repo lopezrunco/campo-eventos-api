@@ -8,7 +8,6 @@ const { CONSUMER_TOKEN_TYPE, REFRESH_TOKEN_TYPE } = require('../../utils/token-t
 const returnCredentials = (user, response) => {
     // Delete the fields that won't be showed in the response
     const userWithoutPassword = user.toJSON()
-    delete userWithoutPassword.todos
     delete userWithoutPassword.password
     delete userWithoutPassword.mfaSecret
 

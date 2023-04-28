@@ -19,7 +19,8 @@ for (let userIteration = 0; userIteration < numberOfUsers; userIteration++) {
         email: faker.internet.email(),
         password: userPassword,
         mfaEnabled: false,
-        mfaSecret: ''
+        mfaSecret: '',
+        role: userIteration === 0 ? 'ADMIN' : 'BASIC'   // First user is ADMIN, the rest are BASIC
     })
 }
 // Generate events

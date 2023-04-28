@@ -30,6 +30,7 @@ module.exports = (request, response) => {
             password: user.password,
             email: user.email,
             nickname: user.nickname,
+            role: 'BASIC'
         }).then(user => {
 
             // Obtain the user in plain
