@@ -44,14 +44,14 @@ const getUserById = require('./controllers/user/get-by-id')
 // Users
 app.post('/login', login)
 app.post('/register', register)
-app.get('/admin/users', checkUserCredentials(), getAllUsers)
-app.get('/admin/users/:id', checkUserCredentials(), getUserById)
+app.get('/admin/users', getAllUsers)
+app.get('/admin/users/:id', getUserById)
 
 // Events
-// app.post('/auction/create', createAuction)
-// app.get('/auction/open/:id', getAuctionById)
-// app.post('/auction/edit/:id', playAuction)
-// app.get('/auction/history', getAuctionsHistory)
+// app.post('/event/create', createEvent)
+// app.get('/event/open/:id', getEventById)
+// app.post('/event/edit/:id', editEvent)
+// app.get('/event/history', getEventsHistory)
 
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
