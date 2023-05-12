@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose')
+const { model, Schema } = require('mongoose')
 const { preofferSchema } = require('./preoffer')
 
 const lotSchema = new Schema({
@@ -83,6 +83,9 @@ const lotSchema = new Schema({
     },
 })
 
+const lotModel = model('lots', lotSchema)
+
 module.exports = {
-    lotSchema
+    lotSchema,
+    lotModel
 }

@@ -43,6 +43,18 @@ const getEventById = require('./controllers/event/get-by-id')
 const createEvent = require('./controllers/event/create')
 const updateEvent = require('./controllers/event/update')
 
+// Lots
+const getAllLots = require('./controllers/lot/get-all')
+// const getEventById = require('./controllers/event/get-by-id')
+// const createEvent = require('./controllers/event/create')
+// const updateEvent = require('./controllers/event/update')
+
+// Preoffers
+// const getAllEvents = require('./controllers/event/get-all')
+// const getEventById = require('./controllers/event/get-by-id')
+// const createEvent = require('./controllers/event/create')
+// const updateEvent = require('./controllers/event/update')
+
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
 // -------------------------------------------------------------------------------------------------- //
@@ -58,6 +70,18 @@ app.get('/events', getAllEvents)
 app.get('/events/:id', getEventById)
 app.post('/events/create', createEvent)
 app.put('/events/:id', updateEvent)
+
+// Lots
+app.get('/events/:id/lots', getAllLots)
+// app.get('/events/:id', getEventById)
+// app.post('/events/create', createEvent)
+// app.put('/events/:id', updateEvent)
+
+// Preoffers
+// app.get('/events', getAllEvents)
+// app.get('/events/:id', getEventById)
+// app.post('/events/create', createEvent)
+// app.put('/events/:id', updateEvent)
 
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
