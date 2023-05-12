@@ -33,8 +33,8 @@ const eventSchema = new Schema({
         trim: true
     },
     lots: {
-        type: [lotSchema],
-        default: () => ([])     // If the event does not have lots, add an empty list
+        type: Array,
+        required: false,
     },
     videoLink: {
         type: String,

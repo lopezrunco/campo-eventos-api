@@ -1,5 +1,4 @@
 const { model, Schema } = require('mongoose')
-const { preofferSchema } = require('./preoffer')
 
 const lotSchema = new Schema({
     title: {
@@ -70,8 +69,8 @@ const lotSchema = new Schema({
         required: true
     },
     preoffers: {
-        type: [preofferSchema],
-        default: () => ([])     // If the lot does not have preoffers, add an empty list
+        type: Array,
+        required: false,
     },
     sold: {
         type: Boolean,

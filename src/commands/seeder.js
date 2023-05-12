@@ -5,12 +5,18 @@ const mongoose = require('mongoose')
 const getDbConnectionString = require('../utils/get-db-connection-string')
 const { userModel } = require('../models/user')
 const { eventModel } = require('../models/event')
+const { lotModel } = require('../models/lot')
+const { preofferModel } = require('../models/preoffer')
 
 const users = []
 const events = []
+const lots = []
+const preoffers = []
 const userPassword = bcrypt.hashSync('supersecret', 2)
 const numberOfUsers = 10
 const numberOfEvents = 5
+const numberOfLots = 5
+const numberOfPreOffers = 5
 
 // Generate users
 for (let userIteration = 0; userIteration < numberOfUsers; userIteration++) {
@@ -23,45 +29,9 @@ for (let userIteration = 0; userIteration < numberOfUsers; userIteration++) {
         role: userIteration === 0 ? 'ADMIN' : 'BASIC'   // First user is ADMIN, the rest are BASIC
     })
 }
+
 // Generate events
 for (let eventIteration = 0; eventIteration < numberOfEvents; eventIteration++) {
-    const lots = []
-
-    // Generate lots
-    for (let lotIteration = 0; lotIteration < faker.datatype.number(20); lotIteration++) {
-        const preoffers = []
-
-        // Generate preoffers
-        for (let preofferIteration = 0; preofferIteration < faker.datatype.number(5); preofferIteration++) {
-            preoffers.push({
-                userId: '465678456345656',
-                date: '9 de mayo 2023',
-                amount: faker.datatype.number(500),
-                accepted: faker.datatype.boolean(),
-            })
-        }
-
-        lots.push({
-            title: faker.commerce.productName(),
-            category: faker.commerce.productName(),
-            description: faker.commerce.productDescription(),
-            animals: 43,
-            weight: 457,
-            age: 3,
-            class: 'MBB',
-            state: 'Regular',
-            observations: 'Lorem ipsum dolor sit sament amel del rad jadar melopifunak eme tele pudar.',
-            race: 'Merilin',
-            certificate: faker.datatype.boolean(),
-            type: 'Mocheados',
-            currency: 'U$S',
-            open: faker.datatype.boolean(),
-            preoffers: preoffers,
-            sold: faker.datatype.boolean(),
-            completed: faker.datatype.boolean(),
-        })
-    }
-
     events.push({
         title: faker.commerce.productName(),
         description: faker.commerce.productDescription(),
@@ -69,9 +39,42 @@ for (let eventIteration = 0; eventIteration < numberOfEvents; eventIteration++) 
         organizer: faker.commerce.productName(),
         funder: faker.commerce.productName(),
         location: faker.commerce.productName(),
-        lots: lots,
+        lots: ['34545674567', '345567567', '4356567', '6556785678'],
         videoLink: faker.commerce.productName(),
         broadcastLink: faker.commerce.productName(),
+    })
+}
+
+// Generate lots
+for (let lotIteration = 0; lotIteration < numberOfLots; lotIteration++) {
+    lots.push({
+        title: faker.commerce.productName(),
+        category: faker.commerce.productName(),
+        description: faker.commerce.productDescription(),
+        animals: 43,
+        weight: 457,
+        age: 3,
+        class: 'MBB',
+        state: 'Regular',
+        observations: 'Lorem ipsum dolor sit sament amel del rad jadar melopifunak eme tele pudar.',
+        race: 'Merilin',
+        certificate: faker.datatype.boolean(),
+        type: 'Mocheados',
+        currency: 'U$S',
+        open: faker.datatype.boolean(),
+        preoffers: ['2456367546', '45634563456', '345345345234234', '326745656'],
+        sold: faker.datatype.boolean(),
+        completed: faker.datatype.boolean(),
+    })
+}
+
+// Generate preoffers
+for (let preofferIteration = 0; preofferIteration < numberOfPreOffers; preofferIteration++) {
+    preoffers.push({
+        userId: '465678456345656',
+        date: '9 de mayo 2023',
+        amount: faker.datatype.number(500),
+        accepted: faker.datatype.boolean(),
     })
 }
 
@@ -82,7 +85,9 @@ mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTop
     .then(() => {
         Promise.all([
             userModel.insertMany(users),
-            eventModel.insertMany(events)
+            eventModel.insertMany(events),
+            lotModel.insertMany(lots),
+            preofferModel.insertMany(preoffers)
         ]).then(() => {
             console.log('Done!')
             console.log('------------------------------------------------------------------------')
