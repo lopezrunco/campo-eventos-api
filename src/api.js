@@ -45,9 +45,9 @@ const updateEvent = require('./controllers/event/update')
 
 // Lots
 const getAllLots = require('./controllers/lot/get-all')
-// const getEventById = require('./controllers/event/get-by-id')
-// const createEvent = require('./controllers/event/create')
-// const updateEvent = require('./controllers/event/update')
+const getLotById = require('./controllers/lot/get-by-id')
+const createLot = require('./controllers/lot/create')
+// const updateLot = require('./controllers/lot/update')
 
 // Preoffers
 // const getAllEvents = require('./controllers/event/get-all')
@@ -72,10 +72,10 @@ app.post('/events/create', createEvent)
 app.put('/events/:id', updateEvent)
 
 // Lots
-app.get('/events/:id/lots', getAllLots)
-// app.get('/events/:id', getEventById)
-// app.post('/events/create', createEvent)
-// app.put('/events/:id', updateEvent)
+app.get('/lots', getAllLots)
+app.get('/lots/:id', getLotById)
+app.post('/lots/create', createLot)
+// app.put('/lots/:id', updateLot)
 
 // Preoffers
 // app.get('/events', getAllEvents)

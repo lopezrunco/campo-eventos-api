@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { eventModel } = require('../../models/event')
+const { lotModel } = require('../../models/lot')
 
 module.exports = (request, response) => {
 
@@ -12,15 +12,29 @@ module.exports = (request, response) => {
             pagination.limit = parseInt(request.query.itemsPerPage)
     }
 
-    eventModel
-        .findOne({ _id: request.params.id })
-        .select('lots')
+    lotModel
+        .find()
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(lots => {
-            response.status(200).json({
-                lots
-            })
+            lotModel
+                .count()
+                .then(count => {
+                    const meta = {
+                        count
+                    }
+
+                    response.status(200).json({
+                        meta,
+                        lots
+                    })
+                }).catch(error => {
+                    console.error(error)
+
+                    response.status(500).json({
+                        message: 'Error trying to list the lots'
+                    })
+                })
         }).catch(error => {
             console.error(error)
             response.status(500).json({
