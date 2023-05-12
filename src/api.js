@@ -37,6 +37,9 @@ const register = require('./controllers/user/register')
 const getAllUsers = require('./controllers/user/get-all')
 const getUserById = require('./controllers/user/get-by-id')
 
+// Events
+const getAllEvents = require('./controllers/event/get-all')
+
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
 // -------------------------------------------------------------------------------------------------- //
@@ -48,10 +51,9 @@ app.get('/admin/users', getAllUsers)
 app.get('/admin/users/:id', getUserById)
 
 // Events
+app.get('/event', getAllEvents)
+// app.get('/event/:id', getEventById)
 // app.post('/event/create', createEvent)
-// app.get('/event/open/:id', getEventById)
-// app.post('/event/edit/:id', editEvent)
-// app.get('/event/history', getEventsHistory)
 
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
