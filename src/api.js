@@ -50,10 +50,10 @@ const createLot = require('./controllers/lot/create')
 const updateLot = require('./controllers/lot/update')
 
 // Preoffers
-// const getAllEvents = require('./controllers/event/get-all')
-// const getEventById = require('./controllers/event/get-by-id')
-// const createEvent = require('./controllers/event/create')
-// const updateEvent = require('./controllers/event/update')
+const getAllPreoffers = require('./controllers/preoffer/get-all')
+const getPreofferById = require('./controllers/preoffer/get-by-id')
+const createPreoffer = require('./controllers/preoffer/create')
+const updatePreoffer = require('./controllers/preoffer/update')
 
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
@@ -78,10 +78,10 @@ app.post('/lots/create', createLot)
 app.put('/lots/:id', updateLot)
 
 // Preoffers
-// app.get('/events', getAllEvents)
-// app.get('/events/:id', getEventById)
-// app.post('/events/create', createEvent)
-// app.put('/events/:id', updateEvent)
+app.get('/preoffers', getAllPreoffers)
+app.get('/preoffers/:id', getPreofferById)
+app.post('/preoffers/create', createPreoffer)
+app.put('/preoffers/:id', updatePreoffer)
 
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
