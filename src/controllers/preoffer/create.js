@@ -15,6 +15,9 @@ module.exports = (request, response) => {
             .required(),
         accepted: Joi.boolean()
             .required(),
+        lotId: Joi.string()
+            .alphanum()
+            .required(),
     })
 
     const validationResult = schema.validate(preoffer)
@@ -25,6 +28,7 @@ module.exports = (request, response) => {
             date: preoffer.date,
             amount: preoffer.amount,
             accepted: preoffer.accepted,
+            lotId: preoffer.lotId
         }).then(preoffer => {
             response.status(200).json({
                 message: 'New preoffer created'

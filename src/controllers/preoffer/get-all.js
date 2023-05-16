@@ -2,6 +2,8 @@ const mongoose = require('mongoose')
 const { preofferModel } = require('../../models/preoffer')
 
 module.exports = (request, response) => {
+    const lotId = request.body.lotId
+    console.log(lotId)
 
     const pagination = {
         offset: 0,
@@ -13,7 +15,7 @@ module.exports = (request, response) => {
     }
 
     preofferModel
-        .find()
+        .find({ lotId: request.body.lotId })
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(preoffers => {

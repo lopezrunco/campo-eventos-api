@@ -50,6 +50,9 @@ module.exports = (request, response) => {
             .required(),
         completed: Joi.boolean()
             .required(),
+        eventId: Joi.string()
+            .alphanum()
+            .required(),
     })
 
     const validationResult = schema.validate(lot)
@@ -73,6 +76,7 @@ module.exports = (request, response) => {
             preoffers: lot.preoffers,
             sold: lot.sold,
             completed: lot.completed,
+            eventId: lot.eventId
         }).then(lot => {
             response.status(200).json({
                 message: 'New lot created'

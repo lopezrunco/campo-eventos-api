@@ -72,13 +72,13 @@ app.post('/events/create', createEvent)
 app.put('/events/:id', updateEvent)
 
 // Lots
-app.get('/lots', getAllLots)
+app.post('/lots', getAllLots)
 app.get('/lots/:id', getLotById)
 app.post('/lots/create', createLot)
 app.put('/lots/:id', updateLot)
 
 // Preoffers
-app.get('/preoffers', getAllPreoffers)
+app.post('/preoffers', getAllPreoffers)
 app.get('/preoffers/:id', getPreofferById)
 app.post('/preoffers/create', createPreoffer)
 app.put('/preoffers/:id', updatePreoffer)

@@ -18,7 +18,12 @@ const preofferSchema = new Schema({
     accepted: {
         type: Boolean,
         required: false
-    }
+    },
+    lotId: {
+        type: String,
+        required: true,
+        trim: true
+    },
 })
 
 const preofferModel = model('preoffers', preofferSchema)

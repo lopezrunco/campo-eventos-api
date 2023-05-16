@@ -13,10 +13,10 @@ const events = []
 const lots = []
 const preoffers = []
 const userPassword = bcrypt.hashSync('supersecret', 2)
-const numberOfUsers = 10
-const numberOfEvents = 5
-const numberOfLots = 5
-const numberOfPreOffers = 5
+const numberOfUsers = 5
+const numberOfEvents = 3
+const numberOfLots = 3
+const numberOfPreOffers = 3
 
 // Generate users
 for (let userIteration = 0; userIteration < numberOfUsers; userIteration++) {
@@ -39,7 +39,6 @@ for (let eventIteration = 0; eventIteration < numberOfEvents; eventIteration++) 
         organizer: faker.commerce.productName(),
         funder: faker.commerce.productName(),
         location: faker.commerce.productName(),
-        lots: ['34545674567', '345567567', '4356567', '6556785678'],
         videoLink: faker.commerce.productName(),
         broadcastLink: faker.commerce.productName(),
     })
@@ -65,6 +64,7 @@ for (let lotIteration = 0; lotIteration < numberOfLots; lotIteration++) {
         preoffers: ['2456367546', '45634563456', '345345345234234', '326745656'],
         sold: faker.datatype.boolean(),
         completed: faker.datatype.boolean(),
+        eventId: '456473455674567'
     })
 }
 
@@ -75,6 +75,7 @@ for (let preofferIteration = 0; preofferIteration < numberOfPreOffers; preofferI
         date: '9 de mayo 2023',
         amount: faker.datatype.number(500),
         accepted: faker.datatype.boolean(),
+        lotId: '45678456345567'
     })
 }
 

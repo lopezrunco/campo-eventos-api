@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const { lotModel } = require('../../models/lot')
 
 module.exports = (request, response) => {
-
+    
     const pagination = {
         offset: 0,
         limit: 10
@@ -13,7 +13,7 @@ module.exports = (request, response) => {
     }
 
     lotModel
-        .find()
+        .find({ eventId: request.body.eventId })
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(lots => {

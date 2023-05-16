@@ -80,6 +80,11 @@ const lotSchema = new Schema({
         type: Boolean,
         required: true
     },
+    eventId: {
+        type: String,
+        required: true,
+        trim: true
+    },
 })
 
 const lotModel = model('lots', lotSchema)
