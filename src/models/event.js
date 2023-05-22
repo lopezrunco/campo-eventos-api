@@ -46,6 +46,11 @@ const eventSchema = new Schema({
         required: false,
         trim: true
     },
+    userId: {
+        type: String,
+        required: false,
+        trim: true
+    },
 })
 
 const eventModel = model('events', eventSchema)

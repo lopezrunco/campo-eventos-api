@@ -40,6 +40,7 @@ const getUserById = require('./controllers/user/get-by-id')
 // Events
 const getAllEvents = require('./controllers/event/get-all')
 const getEventById = require('./controllers/event/get-by-id')
+const getEventByUserId = require('./controllers/event/get-by-user-id')
 const createEvent = require('./controllers/event/create')
 const updateEvent = require('./controllers/event/update')
 
@@ -68,6 +69,7 @@ app.get('/admin/users/:id', getUserById)
 // Events
 app.get('/events', getAllEvents)
 app.get('/events/:id', getEventById)
+app.post('/my-events', getEventByUserId)
 app.post('/events/create', createEvent)
 app.put('/events/:id', updateEvent)
 

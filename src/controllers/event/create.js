@@ -30,6 +30,9 @@ module.exports = (request, response) => {
         broadcastLink: Joi.string()
             .alphanum()
             .required(),
+        userId: Joi.string()
+            .alphanum()
+            .required(),
     })
 
     const validationResult = schema.validate(event)
@@ -45,6 +48,7 @@ module.exports = (request, response) => {
             lots: [],
             videoLink: event.videoLink,
             broadcastLink: event.broadcastLink,
+            userId: event.userId,
         }).then(event => {
             response.status(200).json({
                 message: 'New event created'
