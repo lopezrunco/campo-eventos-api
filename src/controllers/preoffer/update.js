@@ -6,8 +6,11 @@ module.exports = (request, response) => {
         .then(preoffer => {
             preoffer.set(request.body)
 
-            preoffer.save().then(() => {
-                response.status(200).end()
+            preoffer.save()
+            .then(() => {
+                response.status(200).json({
+                    message: 'Preoffer updated'
+                })
             }).catch(error => {
                 console.error(error)
 
