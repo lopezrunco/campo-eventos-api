@@ -53,6 +53,7 @@ const updateLot = require('./controllers/lot/update')
 // Preoffers
 const getAllPreoffers = require('./controllers/preoffer/get-all')
 const getPreofferById = require('./controllers/preoffer/get-by-id')
+const getPreofferByUserId = require('./controllers/preoffer/get-by-user-id')
 const createPreoffer = require('./controllers/preoffer/create')
 const updatePreoffer = require('./controllers/preoffer/update')
 
@@ -82,6 +83,7 @@ app.put('/lots/:id', updateLot)
 // Preoffers
 app.post('/preoffers', getAllPreoffers)
 app.get('/preoffers/:id', getPreofferById)
+app.get('/preoffers/user/:id', getPreofferByUserId)
 app.post('/preoffers/create', createPreoffer)
 app.put('/preoffers/:id', updatePreoffer)
 

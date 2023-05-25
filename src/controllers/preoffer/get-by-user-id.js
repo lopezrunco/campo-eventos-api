@@ -2,8 +2,6 @@ const mongoose = require('mongoose')
 const { preofferModel } = require('../../models/preoffer')
 
 module.exports = (request, response) => {
-    const lotId = request.body.lotId
-
     const pagination = {
         offset: 0,
         limit: 10
@@ -14,7 +12,7 @@ module.exports = (request, response) => {
     }
 
     preofferModel
-        .find({ lotId: request.body.lotId })
+        .find({ userId: request.params.id })
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(preoffers => {
@@ -33,13 +31,13 @@ module.exports = (request, response) => {
                     console.error(error)
 
                     response.status(500).json({
-                        message: 'Error trying to list the preoffers'
+                        message: 'Error trying to list the preoffers by user id'
                     })
                 })
         }).catch(error => {
             console.error(error)
             response.status(500).json({
-                message: 'Error trying to list the preoffers'
+                message: 'Error trying to list the preoffers by user id'
             })
         })
 }
