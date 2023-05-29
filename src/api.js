@@ -63,6 +63,7 @@ const updatePreoffer = require('./controllers/preoffer/update')
 const uploadFile = require('./controllers/file/upload')
 const getAllFiles = require('./controllers/file/get-all')
 const getFile = require('./controllers/file/get-file')
+const deleteFile = require('./controllers/file/delete')
 
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
@@ -98,6 +99,7 @@ app.put('/preoffers/:id', updatePreoffer)
 app.post('/upload', uploadFile)
 app.get('/files', getAllFiles)
 app.get('/files/:name', getFile)
+app.delete('/files/:name', deleteFile)
 
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
