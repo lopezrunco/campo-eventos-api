@@ -8,6 +8,8 @@ const getDbConnectionString = require('./utils/get-db-connection-string') // Ret
 
 mongoose.plugin(mongooseToJson) // Loads the mongooseToJson plugin in mongoose
 
+global.__basedir = __dirname;
+
 // -------------------------------------------------------------------------------------------------- //
 // Creation of express app
 // -------------------------------------------------------------------------------------------------- //
@@ -57,6 +59,11 @@ const getPreofferByUserId = require('./controllers/preoffer/get-by-user-id')
 const createPreoffer = require('./controllers/preoffer/create')
 const updatePreoffer = require('./controllers/preoffer/update')
 
+// Files
+const uploadFile = require('./controllers/file/upload')
+const getAllFiles = require('./controllers/file/get-all')
+const getFile = require('./controllers/file/get-file')
+
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
 // -------------------------------------------------------------------------------------------------- //
@@ -86,6 +93,11 @@ app.get('/preoffers/:id', getPreofferById)
 app.get('/preoffers/user/:id', getPreofferByUserId)
 app.post('/preoffers/create', createPreoffer)
 app.put('/preoffers/:id', updatePreoffer)
+
+// Files
+app.post('/upload', uploadFile)
+app.get('/files', getAllFiles)
+app.get('/files/:name', getFile)
 
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
