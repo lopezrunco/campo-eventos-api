@@ -60,7 +60,6 @@ for (let lotIteration = 0; lotIteration < numberOfLots; lotIteration++) {
         type: 'Mocheados',
         currency: 'U$S',
         open: faker.datatype.boolean(),
-        preoffers: ['2456367546', '45634563456', '345345345234234', '326745656'],
         sold: faker.datatype.boolean(),
         completed: faker.datatype.boolean(),
         eventId: '456473455674567'

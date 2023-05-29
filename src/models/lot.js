@@ -25,7 +25,7 @@ const lotSchema = new Schema({
         required: false
     },
     age: {
-        type: String,
+        type: Number,
         required: false,
         trim: true
     },
@@ -67,10 +67,6 @@ const lotSchema = new Schema({
     open: {
         type: Boolean,
         required: true
-    },
-    preoffers: {
-        type: Array,
-        required: false,
     },
     sold: {
         type: Boolean,

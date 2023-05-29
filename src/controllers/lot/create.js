@@ -18,8 +18,7 @@ module.exports = (request, response) => {
             .required(),
         weight: Joi.number()
             .required(),
-        age: Joi.string()
-            .alphanum()
+        age: Joi.number()
             .required(),
         class: Joi.string()
             .alphanum()
@@ -43,8 +42,6 @@ module.exports = (request, response) => {
             .alphanum()
             .required(),
         open: Joi.boolean()
-            .required(),
-        preoffers: Joi.array()
             .required(),
         sold: Joi.boolean()
             .required(),
@@ -73,7 +70,6 @@ module.exports = (request, response) => {
             type: lot.type,
             currency: lot.currency,
             open: lot.open,
-            preoffers: lot.preoffers,
             sold: lot.sold,
             completed: lot.completed,
             eventId: lot.eventId
