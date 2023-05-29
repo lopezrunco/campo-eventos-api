@@ -23,10 +23,6 @@ module.exports = (request, response) => {
         location: Joi.string()
             .alphanum()
             .required(),
-        lots: Joi.array(),
-        videoLink: Joi.string()
-            .alphanum()
-            .required(),
         broadcastLink: Joi.string()
             .alphanum()
             .required(),

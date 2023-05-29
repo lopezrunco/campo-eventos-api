@@ -32,15 +32,6 @@ const eventSchema = new Schema({
         required: false,
         trim: true
     },
-    lots: {
-        type: Array,
-        required: false,
-    },
-    videoLink: {
-        type: String,
-        required: false,
-        trim: true
-    },
     broadcastLink: {
         type: String,
         required: false,

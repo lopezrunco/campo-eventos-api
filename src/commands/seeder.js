@@ -39,7 +39,6 @@ for (let eventIteration = 0; eventIteration < numberOfEvents; eventIteration++) 
         organizer: faker.commerce.productName(),
         funder: faker.commerce.productName(),
         location: faker.commerce.productName(),
-        videoLink: faker.commerce.productName(),
         broadcastLink: faker.commerce.productName(),
     })
 }
