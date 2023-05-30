@@ -1,5 +1,4 @@
 const { model, Schema } = require('mongoose')
-const { lotSchema } = require('./lot')
 
 const eventSchema = new Schema({
     title: {
@@ -33,6 +32,11 @@ const eventSchema = new Schema({
         trim: true
     },
     broadcastLink: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    imageUrl: {
         type: String,
         required: false,
         trim: true

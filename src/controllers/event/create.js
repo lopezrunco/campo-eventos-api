@@ -26,6 +26,7 @@ module.exports = (request, response) => {
         broadcastLink: Joi.string()
             .alphanum()
             .required(),
+        imageUrl: Joi.string(),
         userId: Joi.string()
             .alphanum()
             .required(),
@@ -44,6 +45,7 @@ module.exports = (request, response) => {
             lots: [],
             videoLink: event.videoLink,
             broadcastLink: event.broadcastLink,
+            imageUrl: event.imageUrl,
             userId: event.userId,
         }).then(event => {
             response.status(200).json({
