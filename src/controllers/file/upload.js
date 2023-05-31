@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
 
         res.status(200).send({
             // message: `${req.file.originalname} successfully uploaded`,
-            message: `Archivo subido con éxito! Redireccionando...`,
+            message: `Archivo subido con éxito!`,
         })
     } catch (err) {
         if (err.code == "LIMIT_FILE_SIZE") {

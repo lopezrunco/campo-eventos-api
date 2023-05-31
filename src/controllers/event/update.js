@@ -7,7 +7,9 @@ module.exports = (request, response) => {
             event.set(request.body)
 
             event.save().then(() => {
-                response.status(200).end()
+                response.status(200).json({
+                    message: 'Event updated successfully'
+                }).end()
             }).catch(error => {
                 console.error(error)
 
