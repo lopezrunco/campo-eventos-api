@@ -7,7 +7,7 @@ module.exports = (req, res) => {
     fs.readdir(directoryPath, function (err, files) {
         if (err) {
             res.status(500).send({
-                message: "Unable to get the files",
+                message: "No se pudieron obtener las imagenes.",
             })
         }
 

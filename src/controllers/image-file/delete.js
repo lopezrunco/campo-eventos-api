@@ -8,11 +8,11 @@ module.exports = (req, res) => {
     fs.unlinkSync(directoryPath + fileName)
 
     res.status(200).send({
-      message: "File deleted.",
+      message: "Imagen borrada.",
     })
   } catch (err) {
     res.status(500).send({
-      message: "Could not delete the file. " + err,
+      message: "No se pudo borrar la imagen. " + err,
     })
   }
 }

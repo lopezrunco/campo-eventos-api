@@ -5,23 +5,23 @@ module.exports = async (req, res) => {
         await uploadFile(req, res)
 
         if (req.file == undefined) {
-            return res.status(400).send({ message: "Por favor, seleccione un archivo válido." })
+            return res.status(400).send({ message: "Por favor, seleccione una imagen válida." })
         }
 
         res.status(200).send({
             // message: `${req.file.originalname} successfully uploaded`,
-            message: `Archivo subido con éxito!`,
+            message: `Imagen subida con éxito!`,
         })
     } catch (err) {
         if (err.code == "LIMIT_FILE_SIZE") {
             return res.status(500).send({
-                message: "El archivo no puede pesar mas de 2MB!",
+                message: "La imagen no puede pesar los 2MB!",
             });
         }
 
         res.status(500).send({
             // message: `Could not upload the file: ${req.file.originalname}. ${err}`,
-            message: `No se puedo subir el archivo. ${err}`,
+            message: `No se puedo subir la imagen. ${err}`,
         })
     }
 }
