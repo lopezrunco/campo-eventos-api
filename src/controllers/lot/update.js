@@ -7,7 +7,9 @@ module.exports = (request, response) => {
             lot.set(request.body)
 
             lot.save().then(() => {
-                response.status(200).end()
+                response.status(200).json({
+                    message: 'Lot updated successfully'
+                }).end()
             }).catch(error => {
                 console.error(error)
 

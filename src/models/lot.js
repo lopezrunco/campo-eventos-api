@@ -76,6 +76,11 @@ const lotSchema = new Schema({
         type: Boolean,
         required: true
     },
+    videoSrc: {
+        type: String,
+        required: false,
+        trim: true
+    },
     eventId: {
         type: String,
         required: true,
