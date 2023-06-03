@@ -59,11 +59,17 @@ const getPreofferByUserId = require('./controllers/preoffer/get-by-user-id')
 const createPreoffer = require('./controllers/preoffer/create')
 const updatePreoffer = require('./controllers/preoffer/update')
 
-// Files
+// Image files
 const uploadImageFile = require('./controllers/image-file/upload')
 const getAllImageFiles = require('./controllers/image-file/get-all')
 const getImageFile = require('./controllers/image-file/get-file')
 const deleteImageFile = require('./controllers/image-file/delete')
+
+// Video files
+const uploadVideoFile = require('./controllers/video-file/upload')
+const getAllVideoFiles = require('./controllers/video-file/get-all')
+const getVideoFile = require('./controllers/video-file/get-file')
+const deleteVideoFile = require('./controllers/video-file/delete')
 
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
@@ -95,11 +101,17 @@ app.get('/preoffers/user/:id', getPreofferByUserId)
 app.post('/preoffers/create', createPreoffer)
 app.put('/preoffers/:id', updatePreoffer)
 
-// Files
+// Image files
 app.post('/image-upload', uploadImageFile)
 app.get('/image-files', getAllImageFiles)
 app.get('/image-files/:name', getImageFile)
 app.delete('/image-files/:name', deleteImageFile)
+
+// Video files
+app.post('/video-upload', uploadVideoFile)
+app.get('/video-files', getAllVideoFiles)
+app.get('/video-files/:name', getVideoFile)
+app.delete('/video-files/:name', deleteVideoFile)
 
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
