@@ -45,6 +45,7 @@ const getEventById = require('./controllers/event/get-by-id')
 const getEventByUserId = require('./controllers/event/get-by-user-id')
 const createEvent = require('./controllers/event/create')
 const updateEvent = require('./controllers/event/update')
+const deleteEvent = require('./controllers/event/delete')
 
 // Lots
 const getAllLots = require('./controllers/lot/get-all')
@@ -87,6 +88,7 @@ app.get('/events/:id', getEventById)
 app.post('/my-events', getEventByUserId)
 app.post('/events/create', createEvent)
 app.put('/events/:id', updateEvent)
+app.delete('/events/:id', deleteEvent)
 
 // Lots
 app.post('/lots', getAllLots)
