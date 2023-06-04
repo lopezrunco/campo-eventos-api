@@ -52,6 +52,7 @@ const getAllLots = require('./controllers/lot/get-all')
 const getLotById = require('./controllers/lot/get-by-id')
 const createLot = require('./controllers/lot/create')
 const updateLot = require('./controllers/lot/update')
+const deleteLot = require('./controllers/lot/delete')
 
 // Preoffers
 const getAllPreoffers = require('./controllers/preoffer/get-all')
@@ -95,6 +96,7 @@ app.post('/lots', getAllLots)
 app.get('/lots/:id', getLotById)
 app.post('/lots/create', createLot)
 app.put('/lots/:id', updateLot)
+app.delete('/lots/:id', deleteLot)
 
 // Preoffers
 app.post('/preoffers', getAllPreoffers)
