@@ -1,27 +1,27 @@
-const { eventModel } = require('../../models/event')
+const { lotModel } = require('../../models/lot')
 
 module.exports = (request, response) => {
-    eventModel
+    lotModel
         .findOne({ _id: request.params.id })
-        .then(event => {
-            event.set(request.body)
+        .then(lot => {
+            lot.set(request.body)
 
-            event.save().then(() => {
+            lot.save().then(() => {
                 response.status(200).json({
-                    message: 'Event updated successfully'
+                    message: 'Lot updated successfully'
                 }).end()
             }).catch(error => {
                 console.error(error)
 
                 response.status(500).json({
-                    message: 'Error trying to update the event'
+                    message: 'Error trying to update the lot'
                 })
             })
         }).catch(error => {
             console.error(error)
 
             response.status(500).json({
-                message: 'Error trying to update the event'
+                message: 'Error trying to update the lot'
             })
         })
 }

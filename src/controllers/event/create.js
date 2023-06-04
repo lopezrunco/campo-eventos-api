@@ -23,11 +23,11 @@ module.exports = (request, response) => {
         location: Joi.string()
             .alphanum()
             .required(),
-        lots: Joi.array(),
-        videoLink: Joi.string()
+        broadcastLink: Joi.string()
             .alphanum()
             .required(),
-        broadcastLink: Joi.string()
+        imageUrl: Joi.string(),
+        userId: Joi.string()
             .alphanum()
             .required(),
     })
@@ -45,6 +45,8 @@ module.exports = (request, response) => {
             lots: [],
             videoLink: event.videoLink,
             broadcastLink: event.broadcastLink,
+            imageUrl: event.imageUrl,
+            userId: event.userId,
         }).then(event => {
             response.status(200).json({
                 message: 'New event created'

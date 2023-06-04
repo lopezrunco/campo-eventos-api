@@ -1,5 +1,4 @@
 const { model, Schema } = require('mongoose')
-const { lotSchema } = require('./lot')
 
 const eventSchema = new Schema({
     title: {
@@ -32,16 +31,17 @@ const eventSchema = new Schema({
         required: false,
         trim: true
     },
-    lots: {
-        type: [lotSchema],
-        default: () => ([])     // If the event does not have lots, add an empty list
-    },
-    videoLink: {
+    broadcastLink: {
         type: String,
         required: false,
         trim: true
     },
-    broadcastLink: {
+    imageUrl: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    userId: {
         type: String,
         required: false,
         trim: true

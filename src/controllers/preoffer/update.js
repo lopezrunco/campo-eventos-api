@@ -1,27 +1,28 @@
-const { eventModel } = require('../../models/event')
+const { preofferModel } = require('../../models/preoffer')
 
 module.exports = (request, response) => {
-    eventModel
+    preofferModel
         .findOne({ _id: request.params.id })
-        .then(event => {
-            event.set(request.body)
+        .then(preoffer => {
+            preoffer.set(request.body)
 
-            event.save().then(() => {
+            preoffer.save()
+            .then(() => {
                 response.status(200).json({
-                    message: 'Event updated successfully'
-                }).end()
+                    message: 'Preoffer updated'
+                })
             }).catch(error => {
                 console.error(error)
 
                 response.status(500).json({
-                    message: 'Error trying to update the event'
+                    message: 'Error trying to update the preoffer'
                 })
             })
         }).catch(error => {
             console.error(error)
 
             response.status(500).json({
-                message: 'Error trying to update the event'
+                message: 'Error trying to update the preoffer'
             })
         })
 }

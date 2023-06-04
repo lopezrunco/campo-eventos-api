@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose')
+const { model, Schema } = require('mongoose')
 
 const preofferSchema = new Schema({
     userId: {
@@ -18,9 +18,17 @@ const preofferSchema = new Schema({
     accepted: {
         type: Boolean,
         required: false
-    }
+    },
+    lotId: {
+        type: String,
+        required: true,
+        trim: true
+    },
 })
 
+const preofferModel = model('preoffers', preofferSchema)
+
 module.exports = {
-    preofferSchema
+    preofferSchema,
+    preofferModel
 }

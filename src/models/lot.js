@@ -1,5 +1,4 @@
 const { model, Schema } = require('mongoose')
-const { preofferSchema } = require('./preoffer')
 
 const lotSchema = new Schema({
     title: {
@@ -26,7 +25,7 @@ const lotSchema = new Schema({
         required: false
     },
     age: {
-        type: String,
+        type: Number,
         required: false,
         trim: true
     },
@@ -69,10 +68,6 @@ const lotSchema = new Schema({
         type: Boolean,
         required: true
     },
-    preoffers: {
-        type: [preofferSchema],
-        default: () => ([])     // If the lot does not have preoffers, add an empty list
-    },
     sold: {
         type: Boolean,
         required: true
@@ -80,6 +75,16 @@ const lotSchema = new Schema({
     completed: {
         type: Boolean,
         required: true
+    },
+    videoSrc: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    eventId: {
+        type: String,
+        required: true,
+        trim: true
     },
 })
 
