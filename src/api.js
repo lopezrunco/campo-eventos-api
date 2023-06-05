@@ -60,6 +60,7 @@ const getPreofferById = require('./controllers/preoffer/get-by-id')
 const getPreofferByUserId = require('./controllers/preoffer/get-by-user-id')
 const createPreoffer = require('./controllers/preoffer/create')
 const updatePreoffer = require('./controllers/preoffer/update')
+const deletePreoffer  = require('./controllers/preoffer/delete')
 
 // Image files
 const uploadImageFile = require('./controllers/image-file/upload')
@@ -104,6 +105,7 @@ app.get('/preoffers/:id', getPreofferById)
 app.get('/preoffers/user/:id', getPreofferByUserId)
 app.post('/preoffers/create', createPreoffer)
 app.put('/preoffers/:id', updatePreoffer)
+app.delete('/preoffers/:id', deletePreoffer)
 
 // Image files
 app.post('/image-upload', uploadImageFile)
