@@ -76,6 +76,11 @@ const lotSchema = new Schema({
         type: Boolean,
         required: true
     },
+    YTVideoSrc: {
+        type: String,
+        required: false,
+        trim: true
+    },
     videoSrc: {
         type: String,
         required: false,

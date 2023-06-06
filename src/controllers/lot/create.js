@@ -47,6 +47,7 @@ module.exports = (request, response) => {
             .required(),
         completed: Joi.boolean()
             .required(),
+        YTVideoSrc: Joi.string(),
         videoSrc: Joi.string(),
         eventId: Joi.string()
             .alphanum()
@@ -73,6 +74,7 @@ module.exports = (request, response) => {
             open: lot.open,
             sold: lot.sold,
             completed: lot.completed,
+            YTVideoSrc: lot.YTVideoSrc,
             videoSrc: lot.videoSrc,
             eventId: lot.eventId
         }).then(lot => {
