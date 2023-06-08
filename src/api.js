@@ -47,6 +47,13 @@ const createEvent = require('./controllers/event/create')
 const updateEvent = require('./controllers/event/update')
 const deleteEvent = require('./controllers/event/delete')
 
+// Live events
+const getAllLiveEvents = require('./controllers/live-event/get-all')
+const getLiveEventById = require('./controllers/live-event/get-by-id')
+const createLiveEvent = require('./controllers/live-event/create')
+const updateLiveEvent = require('./controllers/live-event/update')
+const deleteLiveEvent = require('./controllers/live-event/delete')
+
 // Lots
 const getAllLots = require('./controllers/lot/get-all')
 const getLotById = require('./controllers/lot/get-by-id')
@@ -91,6 +98,13 @@ app.post('/my-events', getEventByUserId)
 app.post('/events/create', createEvent)
 app.put('/events/:id', updateEvent)
 app.delete('/events/:id', deleteEvent)
+
+// Live events
+app.get('/live-events/', getAllLiveEvents)
+app.get('/live-events/:id', getLiveEventById)
+app.post('/live-events/create', createLiveEvent)
+app.put('/live-events/:id', updateLiveEvent)
+app.delete('/live-events/:id', deleteLiveEvent)
 
 // Lots
 app.post('/lots', getAllLots)
