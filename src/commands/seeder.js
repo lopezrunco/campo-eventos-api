@@ -13,12 +13,20 @@ const events = []
 const lots = []
 const preoffers = []
 const userPassword = bcrypt.hashSync('supersecret', 2)
-const numberOfUsers = 5
-const numberOfEvents = 3
-const numberOfLots = 3
-const numberOfPreOffers = 3
+const numberOfUsers = 10
+const numberOfEvents = 0
+const numberOfLots = 0
+const numberOfPreOffers = 0
 
 // Generate users
+users.push({
+    nickname: 'Admin',
+    email: 'email@email.com',
+    password: userPassword,
+    mfaEnabled: false,
+    mfaSecret: '',
+    role: 'ADMIN'
+})
 for (let userIteration = 0; userIteration < numberOfUsers; userIteration++) {
     users.push({
         nickname: faker.name.findName(),
@@ -26,7 +34,7 @@ for (let userIteration = 0; userIteration < numberOfUsers; userIteration++) {
         password: userPassword,
         mfaEnabled: false,
         mfaSecret: '',
-        role: userIteration === 0 ? 'ADMIN' : 'BASIC'   // First user is ADMIN, the rest are BASIC
+        role: userIteration < 3 ? 'CONS' : 'BASIC'   // First 3 users will be CONSIGNATARIOS, the rest will be BASIC
     })
 }
 
