@@ -24,8 +24,7 @@ module.exports = (request, response) => {
         organizer: Joi.string()
             .alphanum()
             .required(),
-        coverImgName: Joi.string()
-            .required(),
+        coverImgName: Joi.string(),
         broadcastLinkId: Joi.string()
             .required(),
     })
