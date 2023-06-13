@@ -9,7 +9,6 @@ module.exports = async (req, res) => {
         }
 
         res.status(200).send({
-            // message: `${req.file.originalname} successfully uploaded`,
             message: `Video subido con éxito!`,
         })
     } catch (err) {
@@ -20,7 +19,6 @@ module.exports = async (req, res) => {
         }
 
         res.status(500).send({
-            // message: `Could not upload the file: ${req.file.originalname}. ${err}`,
             message: `No se puedo subir el video. ${err}`,
         })
     }
