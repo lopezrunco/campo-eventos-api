@@ -23,12 +23,12 @@ const eventSchema = new Schema({
     },
     funder: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     location: {
         type: String,
-        required: false,
+        required: true,
         trim: true
     },
     broadcastLink: {
@@ -43,7 +43,7 @@ const eventSchema = new Schema({
     },
     userId: {
         type: String,
-        required: false,
+        required: true,
         trim: true
     },
 })

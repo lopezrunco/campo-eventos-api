@@ -6,30 +6,48 @@ module.exports = (request, response) => {
 
     const schema = Joi.object({
         title: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         description: Joi.string()
-            .alphanum()
-            .required(),
+            .allow(null, '')
+            .min(2)
+            .max(600)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         company: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         organizer: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         funder: Joi.string()
-            .alphanum()
-            .required(),
+            .allow(null, '')
+            .min(3)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         location: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         broadcastLink: Joi.string()
-            .alphanum()
-            .required(),
-        imageUrl: Joi.string(),
+            .allow(null, '')
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
+        imageUrl: Joi.string()
+            .allow(null, '')
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         userId: Joi.string()
+            .required()
             .alphanum()
-            .required(),
     })
 
     const validationResult = schema.validate(event)
@@ -42,8 +60,6 @@ module.exports = (request, response) => {
             organizer: event.organizer,
             funder: event.funder,
             location: event.location,
-            lots: [],
-            videoLink: event.videoLink,
             broadcastLink: event.broadcastLink,
             imageUrl: event.imageUrl,
             userId: event.userId,
