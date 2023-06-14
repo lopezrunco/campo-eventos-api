@@ -9,42 +9,42 @@ module.exports = (request, response) => {
             .required()
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         description: Joi.string()
             .allow(null, '')
             .min(2)
             .max(600)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         company: Joi.string()
             .required()
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         organizer: Joi.string()
             .required()
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         funder: Joi.string()
             .allow(null, '')
             .min(3)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         location: Joi.string()
             .required()
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         broadcastLink: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         imageUrl: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         userId: Joi.string()
             .required()
             .alphanum()

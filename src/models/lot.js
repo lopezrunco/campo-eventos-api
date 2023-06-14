@@ -18,11 +18,13 @@ const lotSchema = new Schema({
     },
     animals: {
         type: Number,
-        required: false
+        required: false,
+        trim: true
     },
     weight: {
         type: Number,
-        required: false
+        required: false,
+        trim: true
     },
     age: {
         type: Number,
@@ -46,12 +48,12 @@ const lotSchema = new Schema({
     },
     race: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     certificate: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     type: {

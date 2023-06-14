@@ -6,52 +6,78 @@ module.exports = (request, response) => {
 
     const schema = Joi.object({
         title: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(1)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         category: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(1)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         description: Joi.string()
-            .alphanum()
-            .required(),
+            .allow(null, '')
+            .min(1)
+            .max(600)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         animals: Joi.number()
-            .required(),
+            .allow(null, ''),
         weight: Joi.number()
-            .required(),
+            .allow(null, ''),
         age: Joi.number()
-            .required(),
+            .allow(null, ''),
         class: Joi.string()
-            .alphanum()
-            .required(),
+            .allow(null, '')
+            .min(1)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         state: Joi.string()
-            .alphanum()
-            .required(),
+            .allow(null, '')
+            .min(1)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         observations: Joi.string()
-            .alphanum()
-            .required(),
+            .allow(null, '')
+            .min(1)
+            .max(600)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         race: Joi.string()
-            .alphanum()
-            .required(),
+            .allow(null, '')
+            .min(1)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         certificate: Joi.string()
-            .alphanum()
-            .required(),
+            .allow(null, '')
+            .min(1)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         type: Joi.string()
-            .alphanum()
-            .required(),
+            .allow(null, '')
+            .min(1)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         currency: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(1)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         open: Joi.boolean()
             .required(),
         sold: Joi.boolean()
             .required(),
         completed: Joi.boolean()
             .required(),
-        YTVideoSrc: Joi.string(),
-        videoSrc: Joi.string(),
+        YTVideoSrc: Joi.string()
+            .allow(null, '')
+            .min(1)
+            .max(50),
+        videoSrc: Joi.string()
+            .allow(null, '')
+            .min(1)
+            .max(50),
         eventId: Joi.string()
+            .required()
             .alphanum()
-            .required(),
     })
 
     const validationResult = schema.validate(lot)
