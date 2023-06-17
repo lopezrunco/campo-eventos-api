@@ -6,27 +6,45 @@ module.exports = (request, response) => {
 
     const schema = Joi.object({
         title: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         day: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         month: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         beginHour: Joi.string()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.:ÁÉÍÓÚáéíóú ]*$/),
         endHour: Joi.string()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.:ÁÉÍÓÚáéíóú ]*$/),
         location: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         organizer: Joi.string()
-            .alphanum()
-            .required(),
+            .required()
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
         coverImgName: Joi.string(),
         broadcastLinkId: Joi.string()
-            .required(),
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
     })
 
     const validationResult = schema.validate(liveEvent)
