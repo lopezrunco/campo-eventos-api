@@ -8,10 +8,10 @@ module.exports = (request, response) => {
         userId: Joi.string()
             .alphanum()
             .required(),
-        date: Joi.string()
-            .alphanum()
+        date: Joi.date()
             .required(),
         amount: Joi.number()
+            .min(0)
             .required(),
         accepted: Joi.boolean()
             .required(),

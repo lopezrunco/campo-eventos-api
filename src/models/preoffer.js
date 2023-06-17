@@ -7,9 +7,8 @@ const preofferSchema = new Schema({
         trim: true
     },
     date: {
-        type: String,
+        type: Date,
         required: true,
-        trim: true
     },
     amount: {
         type: Number,
@@ -17,7 +16,7 @@ const preofferSchema = new Schema({
     },
     accepted: {
         type: Boolean,
-        required: false
+        required: true
     },
     lotId: {
         type: String,
