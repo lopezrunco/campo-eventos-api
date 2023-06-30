@@ -71,10 +71,6 @@ module.exports = (request, response) => {
             .allow(null, '')
             .min(1)
             .max(50),
-        videoSrc: Joi.string()
-            .allow(null, '')
-            .min(1)
-            .max(50),
         eventId: Joi.string()
             .required()
             .alphanum()
@@ -101,7 +97,6 @@ module.exports = (request, response) => {
             sold: lot.sold,
             completed: lot.completed,
             YTVideoSrc: lot.YTVideoSrc,
-            videoSrc: lot.videoSrc,
             eventId: lot.eventId
         }).then(lot => {
             response.status(200).json({

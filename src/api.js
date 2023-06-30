@@ -8,8 +8,6 @@ const getDbConnectionString = require('./utils/get-db-connection-string') // Ret
 
 mongoose.plugin(mongooseToJson) // Loads the mongooseToJson plugin in mongoose
 
-global.__basedir = __dirname;
-
 // -------------------------------------------------------------------------------------------------- //
 // Creation of express app
 // -------------------------------------------------------------------------------------------------- //
@@ -69,18 +67,6 @@ const createPreoffer = require('./controllers/preoffer/create')
 const updatePreoffer = require('./controllers/preoffer/update')
 const deletePreoffer  = require('./controllers/preoffer/delete')
 
-// Image files
-const uploadImageFile = require('./controllers/image-file/upload')
-const getAllImageFiles = require('./controllers/image-file/get-all')
-const getImageFile = require('./controllers/image-file/get-file')
-const deleteImageFile = require('./controllers/image-file/delete')
-
-// Video files
-const uploadVideoFile = require('./controllers/video-file/upload')
-const getAllVideoFiles = require('./controllers/video-file/get-all')
-const getVideoFile = require('./controllers/video-file/get-file')
-const deleteVideoFile = require('./controllers/video-file/delete')
-
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
 // -------------------------------------------------------------------------------------------------- //
@@ -120,18 +106,6 @@ app.get('/preoffers/user/:id', getPreofferByUserId)
 app.post('/preoffers/create', createPreoffer)
 app.put('/preoffers/:id', updatePreoffer)
 app.delete('/preoffers/:id', deletePreoffer)
-
-// Image files
-app.post('/image-upload', uploadImageFile)
-app.get('/image-files', getAllImageFiles)
-app.get('/image-files/:name', getImageFile)
-app.delete('/image-files/:name', deleteImageFile)
-
-// Video files
-app.post('/video-upload', uploadVideoFile)
-app.get('/video-files', getAllVideoFiles)
-app.get('/video-files/:name', getVideoFile)
-app.delete('/video-files/:name', deleteVideoFile)
 
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })

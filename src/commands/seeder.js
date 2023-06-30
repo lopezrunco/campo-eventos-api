@@ -71,7 +71,6 @@ for (let lotIteration = 0; lotIteration < numberOfLots; lotIteration++) {
         sold: faker.datatype.boolean(),
         completed: faker.datatype.boolean(),
         YTVideoSrc: '',
-        videoSrc: '',
         eventId: '456473455674567'
     })
 }

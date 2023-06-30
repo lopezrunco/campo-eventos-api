@@ -14,7 +14,7 @@ module.exports = (request, response) => {
             .allow(null, '')
             .min(2)
             .max(600)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú(\r\n|\r|\n) ]*$/),
         company: Joi.string()
             .required()
             .min(2)
