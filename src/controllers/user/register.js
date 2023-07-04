@@ -11,13 +11,19 @@ module.exports = (request, response) => {
         nickname: Joi.string()
             .alphanum()
             .required(),
+        email: Joi.string()
+            .email()
+            .required(),
         password: Joi.string()
             .min(7)
             .max(50)
             .required(),
-        email: Joi.string()
-            .email()
-            .required()
+        telephone: Joi.number()
+            .allow(null, ''),
+        phone: Joi.number()
+            .allow(null, ''),
+        address: Joi.string()
+            .allow(null, '')
     })
 
     const validationResult = schema.validate(user)
@@ -27,10 +33,13 @@ module.exports = (request, response) => {
         user.password = bcrypt.hashSync(user.password, 2)
 
         userModel.create({
-            password: user.password,
-            email: user.email,
             nickname: user.nickname,
-            role: 'BASIC'
+            email: user.email,
+            password: user.password,
+            role: 'BASIC',
+            telephone: user.telephone,
+            phone: user.phone,
+            address: user.address,
         }).then(user => {
 
             // Obtain the user in plain
@@ -46,6 +55,7 @@ module.exports = (request, response) => {
             })
 
         }).catch(error => {
+            console.log(error)
             response.status(500).json({
                 message: 'Could not register the user'
             })

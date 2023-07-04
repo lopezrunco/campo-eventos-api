@@ -21,6 +21,21 @@ const userSchema = new Schema({
         required: true,
         trim: true
     },
+    telephone: {
+        type: Number,
+        required: false,
+        trim: true
+    },
+    phone: {
+        type: Number,
+        required: false,
+        trim: true
+    },
+    address: {
+        type: String,
+        required: false,
+        trim: true
+    },
     mfaEnabled: {
         type: Boolean,
         required: false

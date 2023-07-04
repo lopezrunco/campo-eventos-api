@@ -36,6 +36,7 @@ const login = require('./controllers/user/login')
 const register = require('./controllers/user/register')
 const getAllUsers = require('./controllers/user/get-all')
 const getUserById = require('./controllers/user/get-by-id')
+const updateUser = require('./controllers/user/update')
 
 // Events
 const getAllEvents = require('./controllers/event/get-all')
@@ -74,6 +75,7 @@ const deletePreoffer  = require('./controllers/preoffer/delete')
 // Users
 app.post('/login', login)
 app.post('/register', register)
+app.put('/user/:id/update', updateUser)
 app.get('/admin/users', getAllUsers)
 app.get('/admin/users/:id', getUserById)
 
@@ -115,3 +117,5 @@ mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTop
     }).catch(error => {
         console.error('Could not connect to the database => ', error)
     })
+
+// TO DO: Agregar checkusercredentials y role a los endpoints
