@@ -36,6 +36,10 @@ const eventSchema = new Schema({
         required: false,
         trim: true
     },
+    eventTimestamp: {
+        type: Date,
+        required: true,
+    },
     imageUrl: {
         type: String,
         required: false,

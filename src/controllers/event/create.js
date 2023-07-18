@@ -40,6 +40,8 @@ module.exports = (request, response) => {
             .min(2)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+        eventTimestamp: Joi.date()
+            .required(),
         imageUrl: Joi.string()
             .allow(null, '')
             .min(2)
@@ -61,6 +63,7 @@ module.exports = (request, response) => {
             funder: event.funder,
             location: event.location,
             broadcastLink: event.broadcastLink,
+            eventTimestamp: event.eventTimestamp,
             imageUrl: event.imageUrl,
             userId: event.userId,
         }).then(event => {
