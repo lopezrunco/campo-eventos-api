@@ -13,6 +13,7 @@ module.exports = (request, response) => {
 
     eventModel
         .find({ userId: request.body.userId })
+        .sort('eventTimestamp')
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(events => {
