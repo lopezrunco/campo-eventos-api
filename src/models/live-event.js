@@ -6,23 +6,12 @@ const liveEventSchema = new Schema({
         required: true,
         trim: true
     },
-    day: {
-        type: String,
+    startBroadcastTimestamp: {
+        type: Date,
         required: true,
-        trim: true
     },
-    month: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    beginHour: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    endHour: {
-        type: String,
+    duration: {
+        type: Number,
         required: true,
         trim: true
     },

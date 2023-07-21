@@ -10,26 +10,12 @@ module.exports = (request, response) => {
             .min(2)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
-        day: Joi.string()
+        startBroadcastTimestamp: Joi.date()
+            .required(),
+        duration: Joi.number()
             .required()
-            .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
-        month: Joi.string()
-            .required()
-            .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ÁÉÍÓÚáéíóú ]*$/),
-        beginHour: Joi.string()
-            .required()
-            .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.:ÁÉÍÓÚáéíóú ]*$/),
-        endHour: Joi.string()
-            .required()
-            .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.:ÁÉÍÓÚáéíóú ]*$/),
+            .min(0)
+            .max(24),
         location: Joi.string()
             .required()
             .min(2)
@@ -52,10 +38,8 @@ module.exports = (request, response) => {
     if (!validationResult.error) {
         liveEventModel.create({
             title: liveEvent.title,
-            day: liveEvent.day,
-            month: liveEvent.month,
-            beginHour: liveEvent.beginHour,
-            endHour: liveEvent.endHour,
+            startBroadcastTimestamp: liveEvent.startBroadcastTimestamp,
+            duration: liveEvent.duration,
             location: liveEvent.location,
             organizer: liveEvent.organizer,
             coverImgName: liveEvent.coverImgName,
