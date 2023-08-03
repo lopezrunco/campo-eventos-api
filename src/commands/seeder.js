@@ -66,7 +66,6 @@ for (let lotIteration = 0; lotIteration < numberOfLots; lotIteration++) {
         race: 'Merilin',
         certificate: faker.datatype.boolean(),
         type: 'Mocheados',
-        currency: 'U$S',
         open: faker.datatype.boolean(),
         sold: faker.datatype.boolean(),
         completed: faker.datatype.boolean(),

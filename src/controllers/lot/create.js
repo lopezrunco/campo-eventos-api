@@ -56,11 +56,6 @@ module.exports = (request, response) => {
             .min(1)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
-        currency: Joi.string()
-            .required()
-            .min(1)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         open: Joi.boolean()
             .required(),
         sold: Joi.boolean()
@@ -92,7 +87,6 @@ module.exports = (request, response) => {
             race: lot.race,
             certificate: lot.certificate,
             type: lot.type,
-            currency: lot.currency,
             open: lot.open,
             sold: lot.sold,
             completed: lot.completed,

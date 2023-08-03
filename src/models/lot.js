@@ -61,11 +61,6 @@ const lotSchema = new Schema({
         required: false,
         trim: true
     },
-    currency: {
-        type: String,
-        required: true,
-        trim: true
-    },
     open: {
         type: Boolean,
         required: true
