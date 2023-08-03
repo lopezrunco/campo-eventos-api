@@ -6,19 +6,58 @@ const eventSchema = new Schema({
         required: true,
         trim: true
     },
+    eventType: {
+        type: String,
+        required: true,
+        trim: true
+    },
     description: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    rp: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    category: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    weight: {
+        type: Number,
+        required: false,
+    },
+    birthDate: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    pedigree: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    breeder: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    other: {
         type: String,
         required: false,
         trim: true
     },
     company: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     organizer: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     funder: {
@@ -28,7 +67,7 @@ const eventSchema = new Schema({
     },
     location: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     broadcastLink: {
