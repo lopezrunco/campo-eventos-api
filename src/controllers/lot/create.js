@@ -46,6 +46,11 @@ module.exports = (request, response) => {
             .min(1)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+        location: Joi.string()
+            .allow(null, '')
+            .min(1)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         certificate: Joi.string()
             .allow(null, '')
             .min(1)
@@ -85,6 +90,7 @@ module.exports = (request, response) => {
             state: lot.state,
             observations: lot.observations,
             race: lot.race,
+            location: lot.location,
             certificate: lot.certificate,
             type: lot.type,
             open: lot.open,

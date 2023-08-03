@@ -51,6 +51,11 @@ const lotSchema = new Schema({
         required: false,
         trim: true
     },
+    location: {
+        type: String,
+        required: false,
+        trim: true
+    },
     certificate: {
         type: String,
         required: false,
