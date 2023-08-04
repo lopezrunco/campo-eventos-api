@@ -11,6 +11,11 @@ const lotSchema = new Schema({
         required: true,
         trim: true
     },
+    name: {
+        type: String,
+        required: false,
+        trim: true
+    },
     description: {
         type: String,
         required: false,

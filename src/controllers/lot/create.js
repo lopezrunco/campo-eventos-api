@@ -15,6 +15,11 @@ module.exports = (request, response) => {
             .min(1)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+        name: Joi.string()
+            .allow(null, '')
+            .min(1)
+            .max(600)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         description: Joi.string()
             .allow(null, '')
             .min(1)
@@ -82,6 +87,7 @@ module.exports = (request, response) => {
         lotModel.create({
             title: lot.title,
             category: lot.category,
+            name: lot.name,
             description: lot.description,
             animals: lot.animals,
             weight: lot.weight,
