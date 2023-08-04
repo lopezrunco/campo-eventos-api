@@ -1,10 +1,9 @@
 const { eventModel } = require('../../models/event')
 
 module.exports = (request, response) => {
-
     const pagination = {
         offset: 0,
-        limit: 10
+        limit: 12
     }
     if (request.query.page && request.query.itemsPerPage) {
         pagination.offset = (request.query.page - 1) * request.query.itemsPerPage,

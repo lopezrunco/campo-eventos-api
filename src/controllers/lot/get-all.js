@@ -2,20 +2,8 @@ const mongoose = require('mongoose')
 const { lotModel } = require('../../models/lot')
 
 module.exports = (request, response) => {
-    
-    const pagination = {
-        offset: 0,
-        limit: 10
-    }
-    if (request.query.page && request.query.itemsPerPage) {
-        pagination.offset = (request.query.page - 1) * request.query.itemsPerPage,
-            pagination.limit = parseInt(request.query.itemsPerPage)
-    }
-
     lotModel
         .find({ eventId: request.body.eventId })
-        .skip(pagination.offset)
-        .limit(pagination.limit)
         .then(lots => {
             lotModel
                 .count()
