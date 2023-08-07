@@ -12,6 +12,7 @@ module.exports = (request, response) => {
 
     liveEventModel
         .find()
+        .sort('startBroadcastTimestamp')
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(events => {
