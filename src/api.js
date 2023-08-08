@@ -1,7 +1,7 @@
 require('dotenv').config() // Load environment variables
 
 const mongoose = require('mongoose') // MongoDB mapper
-const mongooseToJson = require('@meanie/mongoose-to-json') // Cleans the requeston _id & __v fields
+const mongooseToJson = require('@meanie/mongoose-to-json') // Cleans the requests on _id & __v fields
 const express = require('express')
 const cors = require('cors') // Allows connections between the same IP
 const getDbConnectionString = require('./utils/get-db-connection-string') // Returns the conection string
