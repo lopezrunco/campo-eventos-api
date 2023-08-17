@@ -9,7 +9,7 @@ module.exports = (request, response) => {
 
     const schema = Joi.object({
         nickname: Joi.string()
-            .alphanum()
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/)
             .required(),
         email: Joi.string()
             .email()
