@@ -13,6 +13,7 @@ module.exports = (request, response) => {
 
     preofferModel
         .find({ userId: request.params.id })
+        .sort('-date')
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(preoffers => {
