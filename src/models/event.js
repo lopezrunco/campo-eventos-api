@@ -11,41 +11,12 @@ const eventSchema = new Schema({
         required: true,
         trim: true
     },
-    description: {
-        type: String,
-        required: false,
-        trim: true
-    },
-    rp: {
-        type: String,
-        required: false,
-        trim: true
-    },
     category: {
         type: String,
         required: false,
         trim: true
     },
-    weight: {
-        type: Number,
-        required: false,
-    },
-    birthDate: {
-        type: String,
-        required: false,
-        trim: true
-    },
-    pedigree: {
-        type: String,
-        required: false,
-        trim: true
-    },
-    breeder: {
-        type: String,
-        required: false,
-        trim: true
-    },
-    other: {
+    description: {
         type: String,
         required: false,
         trim: true
@@ -60,6 +31,11 @@ const eventSchema = new Schema({
         required: false,
         trim: true
     },
+    breeder: {
+        type: String,
+        required: false,
+        trim: true
+    },
     funder: {
         type: String,
         required: false,
@@ -70,16 +46,21 @@ const eventSchema = new Schema({
         required: false,
         trim: true
     },
-    broadcastLink: {
+    duration: {
+        type: Number,
+        required: true,
+        trim: true
+    },
+    startBroadcastTimestamp: {
+        type: Date,
+        required: true,
+    },
+    broadcastLinkId: {
         type: String,
         required: false,
         trim: true
     },
-    eventTimestamp: {
-        type: Date,
-        required: true,
-    },
-    imageUrl: {
+    coverImgName: {
         type: String,
         required: false,
         trim: true

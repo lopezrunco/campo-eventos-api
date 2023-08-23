@@ -13,49 +13,27 @@ module.exports = (request, response) => {
         eventType: Joi.string()
             .required()
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
-        description: Joi.string()
-            .allow(null, '')
-            .min(2)
-            .max(600)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú(\r\n|\r|\n) ]*$/),
-        rp: Joi.string()
-            .allow(null, '')
-            .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         category: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
-        weight: Joi.number()
-            .allow(null, ''),
-        birthDate: Joi.string()
+        description: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
-        pedigree: Joi.string()
-            .allow(null, '')
-            .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
-        breeder: Joi.string()
-            .allow(null, '')
-            .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
-        other: Joi.string()
-            .allow(null, '')
-            .min(1)
             .max(600)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú(\r\n|\r|\n) ]*$/),
         company: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         organizer: Joi.string()
+            .allow(null, '')
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+        breeder: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
@@ -70,14 +48,16 @@ module.exports = (request, response) => {
             .min(2)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
-        broadcastLink: Joi.string()
+        duration: Joi.number()
+            .allow(null, ''),
+        startBroadcastTimestamp: Joi.date()
+            .required(),
+        broadcastLinkId: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
-        eventTimestamp: Joi.date()
-            .required(),
-        imageUrl: Joi.string()
+        coverImgName: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
@@ -93,21 +73,17 @@ module.exports = (request, response) => {
         eventModel.create({
             title: event.title,
             eventType: event.eventType,
-            description: event.description,
-            rp: event.rp,
             category: event.category,
-            weight: event.weight,
-            birthDate: event.birthDate,
-            pedigree: event.pedigree,
-            breeder: event.breeder,
-            other: event.other,
+            description: event.description,
             company: event.company,
             organizer: event.organizer,
+            breeder: event.breeder,
             funder: event.funder,
             location: event.location,
-            broadcastLink: event.broadcastLink,
-            eventTimestamp: event.eventTimestamp,
-            imageUrl: event.imageUrl,
+            duration: event.duration,
+            startBroadcastTimestamp: event.startBroadcastTimestamp,
+            broadcastLinkId: event.broadcastLinkId,
+            coverImgName: event.coverImgName,
             userId: event.userId,
         }).then(event => {
             response.status(200).json({

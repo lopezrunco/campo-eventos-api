@@ -13,7 +13,7 @@ module.exports = (request, response) => {
 
     eventModel
         .find()
-        .sort('eventTimestamp')
+        .sort('startBroadcastTimestamp')
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(events => {
