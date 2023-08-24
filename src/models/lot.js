@@ -8,7 +8,7 @@ const lotSchema = new Schema({
     },
     category: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     name: {
@@ -17,6 +17,16 @@ const lotSchema = new Schema({
         trim: true
     },
     description: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    rp: {
+        type: Number,
+        required: false,
+        trim: true
+    },
+    pedigree: {
         type: String,
         required: false,
         trim: true

@@ -11,7 +11,7 @@ module.exports = (request, response) => {
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         category: Joi.string()
-            .required()
+            .allow(null, '')
             .min(1)
             .max(50)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
@@ -21,6 +21,13 @@ module.exports = (request, response) => {
             .max(600)
             .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
         description: Joi.string()
+            .allow(null, '')
+            .min(1)
+            .max(600)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+        rp: Joi.number()
+            .allow(null, ''),
+        pedigree: Joi.string()
             .allow(null, '')
             .min(1)
             .max(600)
@@ -89,6 +96,8 @@ module.exports = (request, response) => {
             category: lot.category,
             name: lot.name,
             description: lot.description,
+            rp: lot.rp,
+            pedigree: lot.pedigree,
             animals: lot.animals,
             weight: lot.weight,
             age: lot.age,
