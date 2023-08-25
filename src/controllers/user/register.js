@@ -21,9 +21,11 @@ module.exports = (request, response) => {
         telephone: Joi.number()
             .allow(null, ''),
         phone: Joi.number()
-            .allow(null, ''),
+            .min(0)
+            .required(),
         address: Joi.string()
-            .allow(null, '')
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/)
+            .required(),
     })
 
     const validationResult = schema.validate(user)

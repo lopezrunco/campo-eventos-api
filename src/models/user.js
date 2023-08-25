@@ -28,12 +28,12 @@ const userSchema = new Schema({
     },
     phone: {
         type: Number,
-        required: false,
+        required: true,
         trim: true
     },
     address: {
         type: String,
-        required: false,
+        required: true,
         trim: true
     },
     mfaEnabled: {
