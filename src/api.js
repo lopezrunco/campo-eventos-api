@@ -37,6 +37,7 @@ const register = require('./controllers/user/register')
 const getAllUsers = require('./controllers/user/get-all')
 const getUserById = require('./controllers/user/get-by-id')
 const updateUser = require('./controllers/user/update')
+const deleteUser = require('./controllers/user/delete')
 
 // Events
 const getAllEvents = require('./controllers/event/get-all')
@@ -78,6 +79,7 @@ app.post('/register', register)
 app.put('/user/:id/update', updateUser)
 app.get('/admin/users', getAllUsers)
 app.get('/admin/users/:id', getUserById)
+app.delete('/admin/users/:id', deleteUser)
 
 // Events
 app.get('/events', getAllEvents)
