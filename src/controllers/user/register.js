@@ -1,7 +1,8 @@
 const bcrypt = require('bcrypt')
 const Joi = require('joi')
-const createToken = require('../../utils/create-token')
+
 const { CONSUMER_TOKEN_TYPE, REFRESH_TOKEN_TYPE } = require('../../utils/token-types')
+const createToken = require('../../utils/create-token')
 const { userModel } = require('../../models/user')
 
 module.exports = (request, response) => {
@@ -43,24 +44,26 @@ module.exports = (request, response) => {
             phone: user.phone,
             address: user.address,
         }).then(user => {
-
             // Obtain the user in plain
             const userWithoutPassword = user.toObject()
-
             delete userWithoutPassword.password
-
             userWithoutPassword.token = createToken(user, CONSUMER_TOKEN_TYPE, '20m')
             userWithoutPassword.refreshToken = createToken(user, REFRESH_TOKEN_TYPE, '2d')
 
             response.json({
                 user: userWithoutPassword
             })
-
         }).catch(error => {
             console.log(error)
-            response.status(500).json({
-                message: 'Could not register the user'
-            })
+            if (error.name === 'ValidationError') {
+                response.status(409).json({
+                    message: `${(error.errors.email) ? 'Email' : 'Nombre de usuario'} ya registrado. Intente con otro.`
+                })
+            } else {
+                response.status(500).json({
+                    message: 'Could not register the user'
+                })
+            }
         })
     } else {
         response.status(400).json({
