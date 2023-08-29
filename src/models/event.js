@@ -8,7 +8,7 @@ const eventSchema = new Schema({
     },
     eventType: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     category: {
@@ -48,7 +48,7 @@ const eventSchema = new Schema({
     },
     duration: {
         type: Number,
-        required: true,
+        required: false,
         trim: true
     },
     startBroadcastTimestamp: {

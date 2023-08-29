@@ -9,45 +9,47 @@ module.exports = (request, response) => {
             .required()
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         eventType: Joi.string()
-            .required()
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .allow(null, '')
+            .min(2)
+            .max(50)
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         category: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         description: Joi.string()
             .allow(null, '')
             .min(2)
             .max(600)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú(\r\n|\r|\n) ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº&(\r\n|\r|\n) ]*$/),
         company: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         organizer: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         breeder: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         funder: Joi.string()
             .allow(null, '')
             .min(3)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         location: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         duration: Joi.number()
             .allow(null, ''),
         startBroadcastTimestamp: Joi.date()
@@ -56,12 +58,12 @@ module.exports = (request, response) => {
             .allow(null, '')
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         coverImgName: Joi.string()
             .allow(null, '')
             .min(2)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         userId: Joi.string()
             .required()
             .alphanum()

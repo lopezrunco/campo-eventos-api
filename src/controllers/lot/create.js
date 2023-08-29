@@ -9,29 +9,29 @@ module.exports = (request, response) => {
             .required()
             .min(1)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         category: Joi.string()
             .allow(null, '')
             .min(1)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         name: Joi.string()
             .allow(null, '')
             .min(1)
             .max(600)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         description: Joi.string()
             .allow(null, '')
             .min(1)
             .max(600)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         rp: Joi.number()
             .allow(null, ''),
         pedigree: Joi.string()
             .allow(null, '')
             .min(1)
             .max(600)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         animals: Joi.number()
             .allow(null, ''),
         weight: Joi.number()
@@ -42,37 +42,37 @@ module.exports = (request, response) => {
             .allow(null, '')
             .min(1)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         state: Joi.string()
             .allow(null, '')
             .min(1)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         observations: Joi.string()
             .allow(null, '')
             .min(1)
             .max(600)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         race: Joi.string()
             .allow(null, '')
             .min(1)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         location: Joi.string()
             .allow(null, '')
             .min(1)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         certificate: Joi.string()
             .allow(null, '')
             .min(1)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         type: Joi.string()
             .allow(null, '')
             .min(1)
             .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóú ]*$/),
+            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
         open: Joi.boolean()
             .required(),
         sold: Joi.boolean()
