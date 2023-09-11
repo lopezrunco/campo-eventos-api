@@ -42,7 +42,7 @@ const lotSchema = new Schema({
         trim: true
     },
     age: {
-        type: Number,
+        type: String,
         required: false,
         trim: true
     },

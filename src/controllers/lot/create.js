@@ -31,8 +31,10 @@ module.exports = (request, response) => {
             .allow(null, ''),
         weight: Joi.number()
             .allow(null, ''),
-        age: Joi.number()
-            .allow(null, ''),
+        age: Joi.string()
+            .allow(null, '')
+            .min(1)
+            .max(50),
         class: Joi.string()
             .allow(null, '')
             .min(1)
