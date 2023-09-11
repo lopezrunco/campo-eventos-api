@@ -8,48 +8,39 @@ module.exports = (request, response) => {
         title: Joi.string()
             .required()
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         eventType: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         category: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         description: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(600)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº&(\r\n|\r|\n) ]*$/),
+            .max(600),
         company: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         organizer: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         breeder: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         funder: Joi.string()
             .allow(null, '')
             .min(3)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         location: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         duration: Joi.number()
             .allow(null, ''),
         startBroadcastTimestamp: Joi.date()
@@ -57,13 +48,11 @@ module.exports = (request, response) => {
         broadcastLinkId: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         coverImgName: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50)
-            .regex(/^[a-zA-Z0-9,.ñÁÉÍÓÚáéíóúº& ]*$/),
+            .max(50),
         userId: Joi.string()
             .required()
             .alphanum()
