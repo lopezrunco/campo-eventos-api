@@ -60,6 +60,11 @@ const eventSchema = new Schema({
         required: false,
         trim: true
     },
+    externalLink: {
+        type: String,
+        required: false,
+        trim: true
+    },
     coverImgName: {
         type: String,
         required: false,

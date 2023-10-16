@@ -49,6 +49,10 @@ module.exports = (request, response) => {
             .allow(null, '')
             .min(2)
             .max(50),
+        externalLink: Joi.string()
+            .allow(null, '')
+            .min(2)
+            .max(200),
         coverImgName: Joi.string()
             .allow(null, '')
             .min(2)
@@ -74,6 +78,7 @@ module.exports = (request, response) => {
             duration: event.duration,
             startBroadcastTimestamp: event.startBroadcastTimestamp,
             broadcastLinkId: event.broadcastLinkId,
+            externalLink: event.externalLink,
             coverImgName: event.coverImgName,
             userId: event.userId,
         }).then(event => {
