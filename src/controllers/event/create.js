@@ -56,7 +56,7 @@ module.exports = (request, response) => {
         coverImgName: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(50),
+            .max(200),
         userId: Joi.string()
             .required()
             .alphanum()
