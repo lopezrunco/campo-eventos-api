@@ -106,6 +106,3 @@ mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTop
         console.error('Could not connect to the database => ', error)
     })
 
-// TO DO:
-// - Agregar checkusercredentials y role a los endpoints
-// - Actualizar seeder con todos los cambios que se hicieron
