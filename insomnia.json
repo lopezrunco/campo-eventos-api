@@ -1,9 +1,250 @@
 {
     "_type": "export",
     "__export_format": 4,
-    "__export_date": "2023-12-06T04:06:37.368Z",
+    "__export_date": "2023-12-06T05:21:09.423Z",
     "__export_source": "insomnia.desktop.app:v2023.5.8",
     "resources": [
+        {
+            "_id": "req_c2821cd712c54c869bf15be3c920dbee",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1701839986953,
+            "created": 1701839899728,
+            "url": "http://localhost:3000/my-posts",
+            "name": "Get posts by user ID",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"userId\": \"6481f02ccb5d074e606fbd10\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836263339,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "parentId": "fld_a5bf0f35260c4ca1bf108438b83082ef",
+            "modified": 1701836243022,
+            "created": 1701836240290,
+            "name": "posts",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1685358015985,
+            "_type": "request_group"
+        },
+        {
+            "_id": "fld_a5bf0f35260c4ca1bf108438b83082ef",
+            "parentId": "wrk_f1403af4594747e29f3d7ecdd495fb98",
+            "modified": 1682489004278,
+            "created": 1682489004278,
+            "name": "Campo Eventos",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1682489004278,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_f1403af4594747e29f3d7ecdd495fb98",
+            "parentId": null,
+            "modified": 1701835489467,
+            "created": 1631197777444,
+            "name": "campo-eventos-endpoints",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_e4fb526b0a1b41079a957a4ce2bd541e",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1701838867280,
+            "created": 1701838739636,
+            "url": "http://localhost:3000/posts/656ffff07ee6184cab893a50",
+            "name": "Delete post by ID",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836263239,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_38cc633ce54a4b1c9d00eabdcd51b69b",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1701838226671,
+            "created": 1701838152445,
+            "url": "http://localhost:3000/posts/656ffa74624590335c0160f1",
+            "name": "Edit post",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\t\"title\": \"¿Qué son los transgénicos 3 editado?\",\n\t\t\"category\": \"Categoria de ejemplo editado\",\n\t\t\"content\": \"<p><span><b>La enfermedad celíaca</b> es una patología intestinal </br>, producida por sensibilidad a ciertas proteínas las prolaminas que se encuentran en cereales como la AVENA, la CEBADA, el CENTENO y el TRIGO, conocidos como TACC, y que son <b>tóxicas</b> para el organismo.</span></p>\",\n\t\t\"headline\": \"Absolutamente todos los organismos vivos están constituidos por conjuntos de genes editado.\",\n\t\t\"picture\": \"https://entrematesyotrasyerbas.com.uy/img/novedades/Qu%C3%A9%20son%20los%20transg%C3%A9nicos.jpg\",\n\t\t\"tags\": [\"etiqueta1\", \"etiqueta2\", \"etiqueta3\"],\t\n\t\t\"userId\": \"6481f02ccb5d074e606fbd17\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_52be7a7a3c1546a2bfa24203c81937c0"
+                },
+                {
+                    "id": "pair_0de35a227e314af0b689ccda30b01e08",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2M4NzgyM2VmYzk5OTQ4MmI1MjBhNyIsImVtYWlsIjoiV2luaWZyZWQuTGFuZ3dvcnRoMjhAeWFob28uY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNjQxMzA5NDczLCJleHAiOjE2NDEzMTEyNzN9.IcrH9OFSy6NNtbLyT082wQjdPmq6TAKqrU8lJUToLqI",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836263139,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_32bce3c06cf246fb8add1119ab762d65",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1701837963217,
+            "created": 1701837899257,
+            "url": "http://localhost:3000/posts/656ffa74624590335c0160f1",
+            "name": "Get post by ID",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836263039,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_50728a9c0aef4ac2aca49832aaaf865b",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1701837631160,
+            "created": 1701837623274,
+            "url": "http://localhost:3000/posts",
+            "name": "Get all posts",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "id": "pair_e630db7fcdda428cb21b446f5f9e7085",
+                    "name": "",
+                    "value": "",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836262939,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_a1ddcdf58d4e4698980f39be7ed38603",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1701839971588,
+            "created": 1701836256163,
+            "url": "http://localhost:3000/posts/create",
+            "name": "Create post",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\t\"title\": \"¿Qué son los transgénicos 3?\",\n\t\t\"category\": \"Categoria de ejemplo\",\n\t\t\"content\": \"<p><span>La enfermedad celíaca es una patología intestinal </br>, producida por sensibilidad a ciertas proteínas las prolaminas que se encuentran en cereales como la AVENA, la CEBADA, el CENTENO y el TRIGO, conocidos como TACC, y que son <b>tóxicas</b> para el organismo.</span></p>\",\n\t\t\"headline\": \"Absolutamente todos los organismos vivos están constituidos por conjuntos de genes.\",\n\t\t\"picture\": \"https://entrematesyotrasyerbas.com.uy/img/novedades/Qu%C3%A9%20son%20los%20transg%C3%A9nicos.jpg\",\n\t\t\"tags\": [\"etiqueta1\", \"etiqueta2\"],\t\n\t\t\"userId\": \"6481f02ccb5d074e606fbd10\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_42319ae30f1d41d49754f9b604f94000"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836262839,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
         {
             "_id": "req_7aa0bcb5015a48319ce9ab1082e12438",
             "parentId": "fld_06da6dc62d0a4657890a784c1c4708bd",
@@ -56,28 +297,6 @@
             "environmentPropertyOrder": null,
             "metaSortKey": -1685358015885,
             "_type": "request_group"
-        },
-        {
-            "_id": "fld_a5bf0f35260c4ca1bf108438b83082ef",
-            "parentId": "wrk_f1403af4594747e29f3d7ecdd495fb98",
-            "modified": 1682489004278,
-            "created": 1682489004278,
-            "name": "Campo Eventos",
-            "description": "",
-            "environment": {},
-            "environmentPropertyOrder": null,
-            "metaSortKey": -1682489004278,
-            "_type": "request_group"
-        },
-        {
-            "_id": "wrk_f1403af4594747e29f3d7ecdd495fb98",
-            "parentId": null,
-            "modified": 1701835489467,
-            "created": 1631197777444,
-            "name": "campo-eventos-endpoints",
-            "description": "",
-            "scope": "collection",
-            "_type": "workspace"
         },
         {
             "_id": "req_b4c718f72c96492fb05beccf18ef0eb0",
