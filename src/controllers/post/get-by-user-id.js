@@ -1,4 +1,4 @@
-const { eventModel } = require('../../models/event')
+const { postModel } = require('../../models/post')
 
 module.exports = (request, response) => {
     const pagination = {
@@ -10,13 +10,13 @@ module.exports = (request, response) => {
             pagination.limit = parseInt(request.query.itemsPerPage)
     }
 
-    eventModel
+    postModel
         .find({ userId: request.body.userId })
-        .sort('startBroadcastTimestamp')
+        .sort('-updatedAt')
         .skip(pagination.offset)
         .limit(pagination.limit)
-        .then(events => {
-            eventModel
+        .then(posts => {
+            postModel
                 .count()
                 .then(count => {
                     const meta = {
@@ -24,18 +24,18 @@ module.exports = (request, response) => {
                     }
                     response.status(200).json({
                         meta,
-                        events
+                        posts
                     })
                 }).catch(error => {
                     console.error(error)
                     response.status(500).json({
-                        message: 'Error trying to list the events by user'
+                        message: 'Error trying to list the posts by user'
                     })
                 })
         }).catch(error => {
             console.error(error)
             response.status(500).json({
-                message: 'Error trying to list the events by user'
+                message: 'Error trying to list the posts by user'
             })
         })
 }
