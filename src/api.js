@@ -21,7 +21,7 @@ const app = express()
 const checkUserCredentials = require('./middlewares/check-user-credentials')
 
 app.use(cors()) // Cors returns middleware function that opens the API in security terms, to connect the front-end (Allow conections between the same IP)
-app.use(express.json()) // Understand the JSON sended by the API
+app.use(express.json()) // Understand the JSON sent by the API
 
 // -------------------------------------------------------------------------------------------------- //
 // Controllers
@@ -38,6 +38,14 @@ const getAllUsers = require('./controllers/user/get-all')
 const getUserById = require('./controllers/user/get-by-id')
 const updateUser = require('./controllers/user/update')
 const deleteUser = require('./controllers/user/delete')
+
+// Posts
+// const getAllPosts = require('./controllers/post/get-all')
+// const getPostById = require('./controllers/post/get-by-id')
+// const getPostByUserId = require('./controllers/post/get-by-user-id')
+const createPost = require('./controllers/post/create')
+// const updatePost = require('./controllers/post/update')
+// const deletePost = require('./controllers/post/delete')
 
 // Events
 const getAllEvents = require('./controllers/event/get-all')
@@ -73,6 +81,14 @@ app.put('/user/:id/update', updateUser)
 app.get('/admin/users', getAllUsers)
 app.get('/admin/users/:id', getUserById)
 app.delete('/admin/users/:id', deleteUser)
+
+// Posts
+// app.get('/posts', getAllPosts)
+// app.get('/posts/:id', getPostById)
+// app.post('/my-posts', getPostByUserId)
+app.post('/posts/create', createPost)
+// app.put('/posts/:id', updatePost)
+// app.delete('/posts/:id', deletePost)
 
 // Events
 app.get('/events', getAllEvents)
