@@ -40,12 +40,12 @@ const updateUser = require('./controllers/user/update')
 const deleteUser = require('./controllers/user/delete')
 
 // Posts
-// const getAllPosts = require('./controllers/post/get-all')
-// const getPostById = require('./controllers/post/get-by-id')
+const getAllPosts = require('./controllers/post/get-all')
+const getPostById = require('./controllers/post/get-by-id')
 // const getPostByUserId = require('./controllers/post/get-by-user-id')
 const createPost = require('./controllers/post/create')
-// const updatePost = require('./controllers/post/update')
-// const deletePost = require('./controllers/post/delete')
+const updatePost = require('./controllers/post/update')
+const deletePost = require('./controllers/post/delete')
 
 // Events
 const getAllEvents = require('./controllers/event/get-all')
@@ -83,12 +83,12 @@ app.get('/admin/users/:id', getUserById)
 app.delete('/admin/users/:id', deleteUser)
 
 // Posts
-// app.get('/posts', getAllPosts)
-// app.get('/posts/:id', getPostById)
+app.get('/posts', getAllPosts)
+app.get('/posts/:id', getPostById)
 // app.post('/my-posts', getPostByUserId)
 app.post('/posts/create', createPost)
-// app.put('/posts/:id', updatePost)
-// app.delete('/posts/:id', deletePost)
+app.put('/posts/:id', updatePost)
+app.delete('/posts/:id', deletePost)
 
 // Events
 app.get('/events', getAllEvents)

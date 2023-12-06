@@ -35,6 +35,8 @@ const postSchema = new Schema({
         required: true,
         trim: true
     },
+}, {
+    timestamps: true
 })
 
 const postModel = model('posts', postSchema)
