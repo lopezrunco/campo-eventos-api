@@ -16,7 +16,7 @@ module.exports = (request, response) => {
         content: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(1000),
+            .max(15000),
         headline: Joi.string()
             .allow(null, '')
             .min(2)
