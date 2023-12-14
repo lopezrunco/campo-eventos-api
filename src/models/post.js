@@ -1,5 +1,7 @@
 const { model, Schema } = require('mongoose')
 
+const allowedCategories = ['Zafras', 'Ferias', 'Pantalla', 'Equinos', 'Eventos', 'Sociales', 'Otros']
+
 const postSchema = new Schema({
     title: {
         type: String,
@@ -8,8 +10,9 @@ const postSchema = new Schema({
     },
     category: {
         type: String,
-        required: false,
-        trim: true
+        required: true,
+        trim: true,
+        enum: allowedCategories
     },
     content: {
         type: String,

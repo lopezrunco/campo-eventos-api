@@ -10,7 +10,7 @@ module.exports = (request, response) => {
             .min(2)
             .max(50),
         category: Joi.string()
-            .allow(null, '')
+            .required()
             .min(2)
             .max(50),
         content: Joi.string()
