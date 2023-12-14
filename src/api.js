@@ -43,6 +43,7 @@ const deleteUser = require('./controllers/user/delete')
 const getAllPosts = require('./controllers/post/get-all')
 const getPostById = require('./controllers/post/get-by-id')
 const getPostByUserId = require('./controllers/post/get-by-user-id')
+const getPostByCategory = require('./controllers/post/get-by-category')
 const createPost = require('./controllers/post/create')
 const updatePost = require('./controllers/post/update')
 const deletePost = require('./controllers/post/delete')
@@ -68,7 +69,7 @@ const getPreofferById = require('./controllers/preoffer/get-by-id')
 const getPreofferByUserId = require('./controllers/preoffer/get-by-user-id')
 const createPreoffer = require('./controllers/preoffer/create')
 const updatePreoffer = require('./controllers/preoffer/update')
-const deletePreoffer  = require('./controllers/preoffer/delete')
+const deletePreoffer = require('./controllers/preoffer/delete')
 
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
@@ -86,6 +87,7 @@ app.delete('/admin/users/:id', deleteUser)
 app.get('/posts', getAllPosts)
 app.get('/posts/:id', getPostById)
 app.post('/my-posts', getPostByUserId)
+app.post('/posts/category', getPostByCategory)
 app.post('/posts/create', createPost)
 app.put('/posts/:id', updatePost)
 app.delete('/posts/:id', deletePost)
@@ -116,9 +118,8 @@ app.delete('/preoffers/:id', deletePreoffer)
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        app.listen(process.env.PORT) // Start to listen for connections
+        app.listen(process.env.PORT) // Listening for connections
         console.log('Connected to database.')
     }).catch(error => {
         console.error('Could not connect to the database => ', error)
     })
-
