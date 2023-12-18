@@ -71,6 +71,7 @@ const getPreofferByUserId = require('./controllers/preoffer/get-by-user-id')
 const createPreoffer = require('./controllers/preoffer/create')
 const updatePreoffer = require('./controllers/preoffer/update')
 const deletePreoffer = require('./controllers/preoffer/delete')
+const getPostsByTag = require('./controllers/post/get-by-tag')
 
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
@@ -93,6 +94,7 @@ app.post('/posts/create', createPost)
 app.put('/posts/:id', updatePost)
 app.delete('/posts/:id', deletePost)
 app.get('/tags', getAllTags)
+app.get('/posts/tag/:tag', getPostsByTag)
 
 // Events
 app.get('/events', getAllEvents)
