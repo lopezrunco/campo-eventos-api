@@ -41,6 +41,7 @@ const deleteUser = require('./controllers/user/delete')
 
 // Posts
 const getAllPosts = require('./controllers/post/get-all')
+const getAllTags = require('./controllers/post/get-all-tags')
 const getPostById = require('./controllers/post/get-by-id')
 const getPostByUserId = require('./controllers/post/get-by-user-id')
 const getPostByCategory = require('./controllers/post/get-by-category')
@@ -91,6 +92,7 @@ app.post('/posts/category', getPostByCategory)
 app.post('/posts/create', createPost)
 app.put('/posts/:id', updatePost)
 app.delete('/posts/:id', deletePost)
+app.get('/tags', getAllTags)
 
 // Events
 app.get('/events', getAllEvents)
