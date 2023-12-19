@@ -10,7 +10,7 @@ module.exports = (request, response) => {
         }).catch(error => {
             console.error(error)
             response.status(500).json({
-                message: 'Error trying to obtain the post'
+                message: 'Error trying to obtain the post by id'
             })
         })
 }

@@ -1,7 +1,7 @@
 {
     "_type": "export",
     "__export_format": 4,
-    "__export_date": "2023-12-18T03:20:44.423Z",
+    "__export_date": "2023-12-19T12:55:54.915Z",
     "__export_source": "insomnia.desktop.app:v2023.5.8",
     "resources": [
         {
@@ -79,15 +79,15 @@
         {
             "_id": "req_808a4955373c44578b665d186f4a8575",
             "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
-            "modified": 1702552573090,
+            "modified": 1702960548945,
             "created": 1702548883226,
-            "url": "http://localhost:3000/posts/category/?page=1&itemsPerPage=2",
+            "url": "http://localhost:3000/posts/category/Sociales",
             "name": "Get posts by category",
             "description": "",
-            "method": "POST",
+            "method": "GET",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\"category\": \"Ferias\"\n}"
+                "text": ""
             },
             "parameters": [],
             "headers": [
@@ -105,6 +105,44 @@
             ],
             "authentication": {},
             "metaSortKey": -1701836263289,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_754740911dcc4ff787e7a767fed0271c",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1702984771218,
+            "created": 1702983716154,
+            "url": "http://localhost:3000/posts/search?title=Articulo%20prueba",
+            "name": "Search by title",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836263264,
             "isPrivate": false,
             "settingStoreCookies": true,
             "settingSendCookies": true,
@@ -215,6 +253,37 @@
             "_type": "request"
         },
         {
+            "_id": "req_c066b952ee724ff6a9fd3a1771c1b776",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1702898695925,
+            "created": 1702898467620,
+            "url": "http://localhost:3000/posts/tag/virtual",
+            "name": "Get posts by tag",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836262989,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
             "_id": "req_50728a9c0aef4ac2aca49832aaaf865b",
             "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
             "modified": 1701837631160,
@@ -242,6 +311,43 @@
             ],
             "authentication": {},
             "metaSortKey": -1701836262939,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_adad1242873f40b7bbf56b01ed4213d9",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1702890661156,
+            "created": 1702890658163,
+            "url": "http://localhost:3000/tags",
+            "name": "Get all tags",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "id": "pair_e630db7fcdda428cb21b446f5f9e7085",
+                    "name": "",
+                    "value": "",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836262889,
             "isPrivate": false,
             "settingStoreCookies": true,
             "settingSendCookies": true,

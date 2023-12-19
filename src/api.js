@@ -40,6 +40,7 @@ const updateUser = require('./controllers/user/update')
 const deleteUser = require('./controllers/user/delete')
 
 // Posts
+const searchByTitle = require('./controllers/post/search-by-title')
 const getAllPosts = require('./controllers/post/get-all')
 const getAllTags = require('./controllers/post/get-all-tags')
 const getPostById = require('./controllers/post/get-by-id')
@@ -86,6 +87,7 @@ app.get('/admin/users/:id', getUserById)
 app.delete('/admin/users/:id', deleteUser)
 
 // Posts
+app.get('/posts/search', searchByTitle)
 app.get('/posts', getAllPosts)
 app.get('/posts/:id', getPostById)
 app.post('/my-posts', getPostByUserId)
