@@ -1,6 +1,7 @@
 const { postModel } = require('../../models/post')
 
 module.exports = (request, response) => {
+    const { category } = request.params
     const pagination = {
         offset: 0,
         limit: 12
@@ -11,7 +12,7 @@ module.exports = (request, response) => {
     }
 
     postModel
-        .find({ category: request.body.category })
+        .find({ category: category })
         .sort('-updatedAt')
         .skip(pagination.offset)
         .limit(pagination.limit)
