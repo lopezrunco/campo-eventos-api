@@ -26,6 +26,10 @@ module.exports = (request, response) => {
             .min(2)
             .max(200),
         tags: Joi.array(),
+        link: Joi.string()
+            .allow(null, '')
+            .min(2)
+            .max(200),
         userId: Joi.string()
             .required()
             .alphanum()
@@ -41,6 +45,7 @@ module.exports = (request, response) => {
             headline: post.headline,
             picture: post.picture,
             tags: post.tags,
+            link: post.link,
             userId: post.userId,
         }).then(post => {
             response.status(200).json({

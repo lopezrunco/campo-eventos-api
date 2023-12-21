@@ -33,6 +33,11 @@ const postSchema = new Schema({
         type: Array,
         default: () => ([])
     },
+    link: {
+        type: String,
+        required: false,
+        trim: true
+    },
     userId: {
         type: String,
         required: true,
