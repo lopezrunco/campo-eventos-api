@@ -75,6 +75,15 @@ const updatePreoffer = require('./controllers/preoffer/update')
 const deletePreoffer = require('./controllers/preoffer/delete')
 const getPostsByTag = require('./controllers/post/get-by-tag')
 
+// Ads
+const createAd = require('./controllers/ad/create')
+const getAllAds = require('./controllers/ad/get-all')
+const deleteAd = require('./controllers/ad/delete')
+const getAdById = require('./controllers/ad/get-by-id')
+const getAdsByUserId = require('./controllers/ad/get-by-user-id')
+const updateAd = require('./controllers/ad/update')
+const getAdsByPosition = require('./controllers/ad/get-by-position')
+
 // -------------------------------------------------------------------------------------------------- //
 // Routes definition
 // -------------------------------------------------------------------------------------------------- //
@@ -122,6 +131,15 @@ app.get('/preoffers/user/:id', getPreofferByUserId)
 app.post('/preoffers/create', createPreoffer)
 app.put('/preoffers/:id', updatePreoffer)
 app.delete('/preoffers/:id', deletePreoffer)
+
+// Ads
+app.post('/ads/create', createAd)
+app.get('/ads', getAllAds)
+app.delete('/ads/:id', deleteAd)
+app.get('/ads/:id', getAdById)
+app.post('/my-ads', getAdsByUserId)
+app.put('/ads/:id', updateAd)
+app.get('/ads/position/:position', getAdsByPosition)
 
 // Use the imported credentials to connect to the database
 mongoose.connect(getDbConnectionString(), { useNewUrlParser: true, useUnifiedTopology: true })
