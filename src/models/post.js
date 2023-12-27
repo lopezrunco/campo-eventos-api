@@ -38,6 +38,10 @@ const postSchema = new Schema({
         required: false,
         trim: true
     },
+    published: {
+        type: Boolean,
+        required: true
+    },
     userId: {
         type: String,
         required: true,

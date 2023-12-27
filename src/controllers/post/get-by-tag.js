@@ -12,7 +12,7 @@ module.exports = (request, response) => {
     }
 
     postModel
-        .find({ tags: tag })
+        .find({ tags: tag, published: true })
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(posts => {

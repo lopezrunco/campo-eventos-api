@@ -1,7 +1,9 @@
-const { postModel } = require('../../models/post')
+const { postModel } = require("../../models/post")
 
 module.exports = (request, response) => {
-    const { category } = request.params
+    const { title } = request.query
+    const regex = new RegExp(title, 'i') // Case-insensitive search
+
     const pagination = {
         offset: 0,
         limit: 12
@@ -12,23 +14,24 @@ module.exports = (request, response) => {
     }
 
     postModel
-        .find({ category: category, published: true })
+        .find({ title: regex, published: true })
         .sort('-updatedAt')
         .skip(pagination.offset)
         .limit(pagination.limit)
         .then(posts => {
             if (!posts || posts.length === 0) {
                 return response.status(404).json({
-                    message: 'No published posts found for this category'
+                    message: 'No posts found for this title'
                 });
             }
             response.status(200).json({
                 posts
             });
-        }).catch(error => {
-            console.error(error)
-            response.status(500).json({
-                message: 'Error trying to obtain the published posts by category'
-            })
         })
+        .catch(error => {
+            console.error(error);
+            response.status(500).json({
+                message: 'Error trying to obtain the posts by title'
+            });
+        });
 }
