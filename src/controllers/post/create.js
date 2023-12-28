@@ -8,7 +8,7 @@ module.exports = (request, response) => {
         title: Joi.string()
             .required()
             .min(2)
-            .max(50),
+            .max(200),
         category: Joi.string()
             .required()
             .min(2)
