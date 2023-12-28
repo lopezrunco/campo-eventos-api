@@ -1,13 +1,285 @@
 {
     "_type": "export",
     "__export_format": 4,
-    "__export_date": "2023-12-19T12:55:54.915Z",
+    "__export_date": "2023-12-28T03:55:33.292Z",
     "__export_source": "insomnia.desktop.app:v2023.5.8",
     "resources": [
         {
+            "_id": "req_968fdbc1171c46c0b8115cbffd79ad51",
+            "parentId": "fld_65379cb555d9475f881a609135f4570b",
+            "modified": 1703654189422,
+            "created": 1703162607146,
+            "url": "http://localhost:3000/my-ads",
+            "name": "Get ads by user ID",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"userId\": \"657699d0cee7d1a141b625b8\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1703161418600,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_65379cb555d9475f881a609135f4570b",
+            "parentId": "fld_a5bf0f35260c4ca1bf108438b83082ef",
+            "modified": 1703161399684,
+            "created": 1703161397461,
+            "name": "ads",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1685358016085,
+            "_type": "request_group"
+        },
+        {
+            "_id": "fld_a5bf0f35260c4ca1bf108438b83082ef",
+            "parentId": "wrk_f1403af4594747e29f3d7ecdd495fb98",
+            "modified": 1682489004278,
+            "created": 1682489004278,
+            "name": "Campo Eventos",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1682489004278,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_f1403af4594747e29f3d7ecdd495fb98",
+            "parentId": null,
+            "modified": 1701835489467,
+            "created": 1631197777444,
+            "name": "campo-eventos-endpoints",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_d623e6b57b574e448c6e09b5301c6678",
+            "parentId": "fld_65379cb555d9475f881a609135f4570b",
+            "modified": 1703655748741,
+            "created": 1703162359161,
+            "url": "http://localhost:3000/ads/658a5dd7ccd87acf19c248a4",
+            "name": "Get ad by ID",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1703161418500,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_0e5e92219887405a8ea3ee21855d13b2",
+            "parentId": "fld_65379cb555d9475f881a609135f4570b",
+            "modified": 1703243767096,
+            "created": 1703162172461,
+            "url": "http://localhost:3000/ads/65856fcfb79228ee0fabb448",
+            "name": "Delete ad by ID",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1703161418400,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_63ff8bc8481348c09ce8e283bb8600bb",
+            "parentId": "fld_65379cb555d9475f881a609135f4570b",
+            "modified": 1703162008760,
+            "created": 1703162000237,
+            "url": "http://localhost:3000/ads",
+            "name": "Get all ads",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "id": "pair_e630db7fcdda428cb21b446f5f9e7085",
+                    "name": "",
+                    "value": "",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1703161418300,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_0bf155bd24964ff799e67d83f0fa060f",
+            "parentId": "fld_65379cb555d9475f881a609135f4570b",
+            "modified": 1703243740948,
+            "created": 1703163159101,
+            "url": "http://localhost:3000/ads/position/news-5-right",
+            "name": "Get ads by position",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "id": "pair_e630db7fcdda428cb21b446f5f9e7085",
+                    "name": "",
+                    "value": "",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1703161418250,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_297ca3cf963f4f1f971cbba81d7407cb",
+            "parentId": "fld_65379cb555d9475f881a609135f4570b",
+            "modified": 1703735716271,
+            "created": 1703161412032,
+            "url": "http://localhost:3000/ads/create",
+            "name": "Create ad",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\t\n\t\t\"title\": \"Testing ad\",\n\t\t\"position\": \"news-5-right\",\n\t\t\"imgUrl\": \"https://images.pexels.com/photos/6179845/pexels-photo-6179845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\",\n\t\t\"link\": \"https://www.youtube.com/watch?v=-PeMpSLxB7s\",\n\t\t\"published\": true,\n\t\t\"userId\": \"657699d0cee7d1a141b625b8\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_42319ae30f1d41d49754f9b604f94000"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1703161418200,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_a161536e471144b3abbdada699b17d99",
+            "parentId": "fld_65379cb555d9475f881a609135f4570b",
+            "modified": 1703647232619,
+            "created": 1703162783433,
+            "url": "http://localhost:3000/ads/65850f850add0f4712e586f3",
+            "name": "Update ad",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"published\": false\n}\n"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_42319ae30f1d41d49754f9b604f94000"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1702498840769.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
             "_id": "req_c2821cd712c54c869bf15be3c920dbee",
             "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
-            "modified": 1701932112325,
+            "modified": 1703659544154,
             "created": 1701839899728,
             "url": "http://localhost:3000/my-posts",
             "name": "Get posts by user ID",
@@ -15,7 +287,7 @@
             "method": "POST",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\"userId\": \"6481f02ccb5d074e606fbd17\"\n}"
+                "text": "{\n\t\"userId\": \"657699d0cee7d1a141b625b8\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -55,33 +327,49 @@
             "_type": "request_group"
         },
         {
-            "_id": "fld_a5bf0f35260c4ca1bf108438b83082ef",
-            "parentId": "wrk_f1403af4594747e29f3d7ecdd495fb98",
-            "modified": 1682489004278,
-            "created": 1682489004278,
-            "name": "Campo Eventos",
+            "_id": "req_7ac07abd06254ac49bcbb357d18447c6",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1703055510882,
+            "created": 1703054437831,
+            "url": "http://localhost:3000/posts/my-posts/search?userId=6481f02ccb5d074e606fbd17&title=Articulo%20prueba",
+            "name": "Get posts by user ID and search by title",
             "description": "",
-            "environment": {},
-            "environmentPropertyOrder": null,
-            "metaSortKey": -1682489004278,
-            "_type": "request_group"
-        },
-        {
-            "_id": "wrk_f1403af4594747e29f3d7ecdd495fb98",
-            "parentId": null,
-            "modified": 1701835489467,
-            "created": 1631197777444,
-            "name": "campo-eventos-endpoints",
-            "description": "",
-            "scope": "collection",
-            "_type": "workspace"
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836263314,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
         },
         {
             "_id": "req_808a4955373c44578b665d186f4a8575",
             "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
-            "modified": 1702960548945,
+            "modified": 1703665484917,
             "created": 1702548883226,
-            "url": "http://localhost:3000/posts/category/Sociales",
+            "url": "http://localhost:3000/posts/category/Zafras",
             "name": "Get posts by category",
             "description": "",
             "method": "GET",
@@ -117,9 +405,9 @@
         {
             "_id": "req_754740911dcc4ff787e7a767fed0271c",
             "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
-            "modified": 1702984771218,
+            "modified": 1703670752536,
             "created": 1702983716154,
-            "url": "http://localhost:3000/posts/search?title=Articulo%20prueba",
+            "url": "http://localhost:3000/posts/search?title=Articulo",
             "name": "Search by title",
             "description": "",
             "method": "GET",
@@ -143,6 +431,44 @@
             ],
             "authentication": {},
             "metaSortKey": -1701836263264,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_0494780a753d48e18e569952c8635280",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1703670824029,
+            "created": 1703670804766,
+            "url": "http://localhost:3000/posts/search/published?title=Articulo",
+            "name": "Search published by title",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836263251.5,
             "isPrivate": false,
             "settingStoreCookies": true,
             "settingSendCookies": true,
@@ -186,15 +512,15 @@
         {
             "_id": "req_38cc633ce54a4b1c9d00eabdcd51b69b",
             "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
-            "modified": 1702443195902,
+            "modified": 1703671159642,
             "created": 1701838152445,
-            "url": "http://localhost:3000/posts/6577fc34b183ed714112da92",
+            "url": "http://localhost:3000/posts/657158d374b5a2fb272272a6",
             "name": "Edit post",
             "description": "",
             "method": "PUT",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\t\"title\": \"Articulo editado\",\n\t\t\"category\": \"Caballos\",\n\t\t\"content\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet et sem vel cursus. Donec lobortis rhoncus elementum. Vestibulum non diam nisl. Mauris velit lectus, faucibus id lectus in, ornare scelerisque augue. Curabitur neque neque, luctus vel dolor a, dictum tempus purus. Cras maximus sagittis augue eget finibus. Integer ut diam ipsum. Etiam congue sodales tellus pharetra tincidunt.</p>\\n<p></p>\\n<p>Duis ornare pharetra leo, ullamcorper placerat diam vulputate at. Nunc eu elit in enim molestie vulputate id a est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In velit ipsum, luctus et nisi in, interdum tristique mi. Phasellus finibus gravida nisi a auctor. Sed porttitor, purus sit amet venenatis tincidunt, felis nulla condimentum sem, et faucibus ligula odio sodales tellus. Etiam vitae vehicula ex, quis placerat massa. Donec ut suscipit ante, eu pulvinar massa. Aliquam dictum vehicula mi, id dictum tellus auctor lobortis. Aenean dictum aliquam bibendum. Nunc porta dolor quis nisi elementum, vitae dapibus eros scelerisque. Nullam maximus consectetur volutpat. Phasellus blandit venenatis imperdiet.</p>\\n<p></p>\\n<p>Mauris id neque eros. Sed varius, magna euismod blandit bibendum, neque odio aliquam elit, vestibulum elementum quam sem at justo. Fusce ullamcorper ante sed nunc porta mollis. Etiam a nisl vitae augue dignissim congue eget et magna. Nam ultrices interdum nisl nec placerat. Vivamus id fermentum ligula, vel tincidunt arcu. Vivamus non ultrices orci. Aliquam maximus a lectus eget maximus. Nulla sit amet arcu a ante sodales imperdiet eget a odio. In bibendum eu elit eu tincidunt.</p>\\n<p></p>\\n<p>Suspendisse vel eros aliquet, pellentesque dui non, placerat risus. Cras eu molestie arcu. Maecenas velit sem, ultrices eu sodales vel, placerat eu est. Pellentesque iaculis, leo sit amet dignissim congue, libero tortor fringilla libero, nec tincidunt sapien nulla ut augue. Sed rutrum dolor lacus, in commodo tellus efficitur ac. Sed dictum libero non dolor molestie, et pretium lacus pharetra. Nullam dignissim quam eget nunc accumsan vehicula. Donec aliquam tristique placerat. Pellentesque bibendum, urna a imperdiet lacinia, arcu turpis rutrum augue, eu porttitor velit quam et tellus. Etiam vel congue lectus. Vivamus fringilla quis tortor ac hendrerit. Nullam sed risus ut nisl tempor pulvinar. Donec non tempor odio. Donec et nibh vulputate, iaculis quam ullamcorper, placerat ex. Pellentesque eget condimentum dui, sed tristique dui. Sed vitae ligula ante.</p>\",\n\t\t\"headline\": \"Lorem editado ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet et sem vel cursus. Donec lobortis rhoncus elementum.\",\n\t\t\"picture\": \"http://res.cloudinary.com/dvkq2sewj/image/upload/v1702361941/o6rwd5sh8mws69nwtegj.jpg\",\n\t\t\"tags\": [\n\t\t\t\"caballos\",\n\t\t\t\"potrancos\",\n\t\t\t\"remates\"\n\t\t],\n\t\t\"userId\": \"657699d0cee7d1a141b625b8\"\n}"
+                "text": "{\n\t\t\"published\": false\n}"
             },
             "parameters": [],
             "headers": [
@@ -224,9 +550,9 @@
         {
             "_id": "req_32bce3c06cf246fb8add1119ab762d65",
             "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
-            "modified": 1702551641973,
+            "modified": 1703156843406,
             "created": 1701837899257,
-            "url": "http://localhost:3000/posts/657a8c60a7da3d665c795c4e",
+            "url": "http://localhost:3000/posts/65841c01103b1703bae8c3ec",
             "name": "Get post by ID",
             "description": "",
             "method": "GET",
@@ -321,6 +647,43 @@
             "_type": "request"
         },
         {
+            "_id": "req_9e65f0825c1b46f895ed4af7656bf7d1",
+            "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
+            "modified": 1703663439814,
+            "created": 1703663433538,
+            "url": "http://localhost:3000/posts/published",
+            "name": "Get published posts",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGEwYzc1MmRiZDA3NDdjZDljMTZjMSIsImVtYWlsIjoibWVtYnJpQGdtYWlsLmNvbS51eSIsInR5cGUiOiJDT05TVU1FUiIsImlhdCI6MTY4MjY2MDA2NywiZXhwIjoxNjgyNjYxMjY3fQ.qwR2ArGaHE93u9kBLnbqfIxyR-5DtiiQdCHptKHoQVU",
+                    "description": "",
+                    "disabled": false
+                },
+                {
+                    "id": "pair_e630db7fcdda428cb21b446f5f9e7085",
+                    "name": "",
+                    "value": "",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1701836262914,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
             "_id": "req_adad1242873f40b7bbf56b01ed4213d9",
             "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
             "modified": 1702890661156,
@@ -360,7 +723,7 @@
         {
             "_id": "req_a1ddcdf58d4e4698980f39be7ed38603",
             "parentId": "fld_5b5a97e575f04a9dae3e42c6d311923f",
-            "modified": 1702551830538,
+            "modified": 1703735604834,
             "created": 1701836256163,
             "url": "http://localhost:3000/posts/create",
             "name": "Create post",
@@ -368,7 +731,7 @@
             "method": "POST",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\t\"title\": \"Plaza Rural cierra el año con volumen y calidad\",\n\t\t\"category\": \"Sociales\",\n\t\t\"content\": \"<p>Son 13.061 los vacunos y 1.913 los ovinos que componen la oferta del último remate del año desde el Hotel Cottage.</p>\\n<p></p>\\n<p>Se trata de la venta 279 del consorcio, que llega ante un nuevo escenario donde</p>\\n<p></p>\\n<p>todas las circunstancias parecen favorables para el negocio ganadero.</p>\\n<p></p>\\n<p>Por un lado, llovió en forma importante, ya con la primavera en su última etapa, y</p>\\n<p></p>\\n<p>donde más se ha notado es en la explosión de las pasturas. Por otro lado, mejoraron</p>\\n<p></p>\\n<p>las condiciones para el embarque de ganado a planta y a nivel de reposición hay</p>\\n<p></p>\\n<p>mayor expectativa de negocios, porque hoy hay más demanda que oferta.</p>\\n<p></p>\\n<p>Y también vale resaltar la importancia de los plazos que puede otorgar el Banco de</p>\\n<p></p>\\n<p>la República.</p>\\n<p></p>\\n<p>El remate, si bien presencial, se puede seguir por tv cable, internet y streaming de</p>\\n<p></p>\\n<p>audio, así como por la renovada app de Plaza Rural. Los interesados en operar</p>\\n<p></p>\\n<p>podrán hacerlo través de la central 0800.8122 o de los móviles de los diferentes</p>\\n<p></p>\\n<p>escritorios.</p>\\n<p></p>\\n<p>Los lotes ya están subidos a la web plazarural.com.uy para observar, analizar los</p>\\n<p></p>\\n<p>informes y realizar preofertas.</p>\\n<p></p>\\n<p>Se ofrecerán el miércoles 1.635 terneros, 459 terneros y terneras, 96 mixto de más de un año, 27 más de un año entero, 1.756 novillos de 1 a 2 años, 1.316 novillos de 2 a 3 años, 151 novillos de más de 3 años, 73 Holando y 1.613 vacas de invernada.</p>\\n<p></p>\\n<p>Por su parte, el día jueves la oferta estará compuesta por 1.913 ovinos, 1.308 terneras, 1,528 vaquillonas de 1 a 2 años, 704 vaquillonas de más de 2 años, 619 vientres preñados, 175 vientres entorados y finaliza con 1.590 piezas de cría.</p>\\n<p></p>\\n<p>El catálogo impreso estará a disposición de los interesados, desde el lunes 11 de</p>\\n<p></p>\\n<p>diciembre, en las sedes de los escritorios, y en formato digital en</p>\\n<p></p>\\n<p>www.plazarural.com.uy</p>\\n<p></p>\\n<p>Plaza Rural continúa haciendo su aporte logístico y de específicos, en acción</p>\\n<p></p>\\n<p>conjunta con el laboratorio Biokhemia, para colaborar con la campaña oficial de</p>\\n<p></p>\\n<p>combate contra la garrapata.</p>\",\n\t\t\"headline\": \"Entre los días miércoles y jueves de esta semana tendrá lugar la ultima venta del año para Plaza Rural, en un momento ideal para quienes quieran reponer, con volumen, calidad y plazo.\",\n\t\t\"picture\": \"http://res.cloudinary.com/dvkq2sewj/image/upload/v1702529922/u973rdudzpexwtxjejtp.webp\",\n\t\t\"tags\": [\n\t\t\t\"remates\",\n\t\t\t\"virtual\",\n\t\t\t\"plaza\"\n\t\t],\n\t\t\"userId\": \"657699d0cee7d1a141b625b8\"\n}"
+                "text": "{\n\t\t\"title\": \"testing published\",\n\t\t\"category\": \"Sociales\",\n\t\t\"content\": \"<p>Son 13.061 los vacunos y 1.913 los ovinos que componen la oferta del último remate del año desde el Hotel Cottage.</p><p>conjunta con el laboratorio Biokhemia, para colaborar con la campaña oficial de</p>\\n<p></p>\\n<p>combate contra la garrapata.</p>\",\n\t\t\"headline\": \"Entre los días miércoles y jueves de esta semana tendrá lugar la ultima venta del año para Plaza Rural, en un momento ideal para quienes quieran reponer, con volumen, calidad y plazo.\",\n\t\t\"picture\": \"https://images.pexels.com/photos/6179845/pexels-photo-6179845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\",\n\t\t\"tags\": [\n\t\t\t\"remates\",\n\t\t\t\"virtual\",\n\t\t\t\"plaza\"\n\t\t],\n\t\t\"published\": true,\n\t\t\"userId\": \"657699d0cee7d1a141b625b8\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -804,9 +1167,9 @@
         {
             "_id": "req_c9c4c4bcd70242f6bbf1b7515e34e044",
             "parentId": "fld_ae64e5a139de4ca5985d7c3b9d5781fe",
-            "modified": 1692263804157,
+            "modified": 1703064184078,
             "created": 1682660127355,
-            "url": "http://localhost:3000/admin/users/64dde4bea7de82c63d1a6cfe",
+            "url": "http://localhost:3000/admin/users/657699d0cee7d1a141b625b8",
             "name": "Get user by ID",
             "description": "",
             "method": "GET",
@@ -1090,7 +1453,7 @@
         {
             "_id": "req_39a43976831241bca7f0f6b32e901a91",
             "parentId": "fld_18834bc0a81e459688700fc2e0b377ae",
-            "modified": 1697443213653,
+            "modified": 1703735674266,
             "created": 1683873654981,
             "url": "http://localhost:3000/events/create",
             "name": "Create event",
@@ -1098,7 +1461,7 @@
             "method": "POST",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\t\"title\": \"Testing\",\n\t\t\"eventType\": \"Equinos\",\n\t\t\"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\",\n\t\t\"category\": \"Caballos locos\",\n\t\t\"breeder\": \"Cabana los locos\",\n\t\t\"company\": \"asdasdasd\",\n\t\t\"organizer\": \"asdasd\",\n\t\t\"funder\": \"asdasd\",\n\t\t\"location\": \"asdasd\",\n\t\t\"startBroadcastTimestamp\": 1997443043204,\n\t\t\"duration\": 3,\n\t\t\"coverImgName\": \"asdasd asd\",\n\t\t\"broadcastLinkId\": \"asdasd\",\t\n\t\t\"externalLink\": \"asdasd\",\t\n\t\t\"userId\": \"6481f02ccb5d074e606fbd17\"\n}\n\n\n"
+                "text": "{\n\t\t\"title\": \"Testing\",\n\t\t\"eventType\": \"Equinos\",\n\t\t\"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\",\n\t\t\"category\": \"Caballos locos\",\n\t\t\"breeder\": \"Cabana los locos\",\n\t\t\"company\": \"asdasdasd\",\n\t\t\"organizer\": \"asdasd\",\n\t\t\"funder\": \"asdasd\",\n\t\t\"location\": \"asdasd\",\n\t\t\"startBroadcastTimestamp\": 1997443043204,\n\t\t\"duration\": 3,\n\t\t\"coverImgName\": \"https://images.pexels.com/photos/6179845/pexels-photo-6179845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\",\n\t\t\"broadcastLinkId\": \"asdasd\",\t\n\t\t\"externalLink\": \"asdasd\",\t\n\t\t\"userId\": \"6481f02ccb5d074e606fbd17\"\n}\n\n\n"
             },
             "parameters": [],
             "headers": [
