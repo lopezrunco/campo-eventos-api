@@ -5,15 +5,17 @@ module.exports = (request, response) => {
         .find({}, 'tags')
         .then(posts => {
             let allTags = []
-            // Concatenate all the tags arrays in one array
+            // Concatenate all the tags arrays in one array after filtering out falsy values
             posts.forEach(post => {
-                allTags = allTags.concat(post.tags)
+                allTags = allTags.concat(post.tags.filter((tag) => tag))
             })
             // Remove duplicates by converting to Set and back to Array
             const uniqueTags = Array.from(new Set(allTags))
+            // Remove empty or whitespace tags
+            filteredTags = uniqueTags.filter((tag) => tag.trim() !== '')
 
             response.status(200).json({
-                tags: uniqueTags
+                tags: filteredTags
             })
         }).catch(error => {
             console.error(error)
