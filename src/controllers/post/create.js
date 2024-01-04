@@ -20,7 +20,7 @@ module.exports = (request, response) => {
         headline: Joi.string()
             .allow(null, '')
             .min(2)
-            .max(200),
+            .max(500),
         picture: Joi.string()
             .allow(null, '')
             .min(2)
