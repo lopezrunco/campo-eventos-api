@@ -47,7 +47,7 @@ module.exports = (request, response) => {
             // Obtain the user in plain
             const userWithoutPassword = user.toObject()
             delete userWithoutPassword.password
-            userWithoutPassword.token = createToken(user, CONSUMER_TOKEN_TYPE, '20m')
+            userWithoutPassword.token = createToken(user, CONSUMER_TOKEN_TYPE, '30m')
             userWithoutPassword.refreshToken = createToken(user, REFRESH_TOKEN_TYPE, '2d')
 
             response.json({
