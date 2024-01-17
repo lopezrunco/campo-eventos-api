@@ -1,7 +1,9 @@
 module.exports = (roles) => { // Wrap a function inside another to pass role as a parameter
     return (request, response, next) => {
-        if (request.user) {
-            const roleMatches = roles.find(role => role === request.user.role)
+        const userRole = request.headers['userrole']
+
+        if (userRole) {
+            const roleMatches = roles.find(role => role === userRole)
 
             if (roleMatches) {
                 next()

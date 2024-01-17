@@ -24,6 +24,9 @@ npm run seed
 # Start API
 npm start
 
-# Run test
+# Run a global test
 npm test
+
+# Run a test in a specific file
+npm test check-user-role.test.js
 ```

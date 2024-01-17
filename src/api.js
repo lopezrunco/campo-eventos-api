@@ -19,6 +19,7 @@ const app = express()
 // -------------------------------------------------------------------------------------------------- //
 
 const checkUserCredentials = require('./middlewares/check-user-credentials')
+const checkUserRole = require('./middlewares/check-user-role')
 
 app.use(cors()) // Cors returns middleware function that opens the API in security terms, to connect the front-end (Allow conections between the same IP)
 app.use(express.json()) // Understand the JSON sent by the API
@@ -94,9 +95,9 @@ const getAdsByPosition = require('./controllers/ad/get-by-position')
 app.post('/login', login)
 app.post('/register', register)
 app.put('/user/:id/update', checkUserCredentials(), updateUser)
-app.get('/admin/users', checkUserCredentials(), getAllUsers)
+app.get('/admin/users', checkUserCredentials(), checkUserRole(['ADMIN']), getAllUsers)
 app.get('/admin/users/:id', checkUserCredentials(), getUserById)
-app.delete('/admin/users/:id', checkUserCredentials(), deleteUser)
+app.delete('/admin/users/:id', checkUserCredentials(), checkUserRole(['ADMIN']), deleteUser)
 
 // Posts
 app.get('/posts/search', checkUserCredentials(), searchByTitle)

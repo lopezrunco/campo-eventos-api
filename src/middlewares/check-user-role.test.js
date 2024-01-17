@@ -10,7 +10,7 @@ mockResponse = () => {
 
 describe('Middleware to check the user role', () => {
     test('The middleware must continue the ejecution if the user role is on the allowed roles list', () => {
-        const request = { user: { role: 'BASIC' } }
+        const request = { headers: { 'userrole': 'BASIC' } }
         const response = mockResponse()
         const next = jest.fn()
         checkUserRole(['ADMIN', 'CONS', 'AUTHOR', 'BASIC'])(request, response, next)
@@ -18,7 +18,7 @@ describe('Middleware to check the user role', () => {
     })
 
     test('The middleware must not continue the execution if the user role is not on the allowed roles list (Error 403)', () => {
-        const request = { user: { role: 'BASIC' } }
+        const request = { headers: { 'userrole': 'BASIC' } }
         const response = mockResponse()
         const next = jest.fn();
     
@@ -38,7 +38,7 @@ describe('Middleware to check the user role', () => {
     });
     
     test('The middleware must not continue the execution if there is no user role (Error 401)', () => {
-        const request = {}
+        const request = { headers: {} }
         const response = mockResponse()
         const next = jest.fn();
     
