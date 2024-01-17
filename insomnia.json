@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2024-01-17T02:13:17.807Z",
+  "__export_date": "2024-01-17T13:11:46.925Z",
   "__export_source": "insomnia.desktop.app:v8.5.1",
   "resources": [
     {
@@ -282,7 +282,7 @@
     {
       "_id": "req_aec79c035abe4e20a9fe3571249e9ed8",
       "parentId": "fld_f8865439264d4f69bfc432e96bd7abb5",
-      "modified": 1705406101582,
+      "modified": 1705489072970,
       "created": 1701839899728,
       "url": "http://localhost:3000/my-posts",
       "name": "Get posts by user ID",
@@ -302,7 +302,13 @@
         {
           "id": "pair_83e4c08eb3ba4ec49c4893d631b41831",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDA2MDU3LCJleHAiOjE3MDU0MDc4NTd9.J8xaRuSEoc23yyTWwe7AYfMiyMW9yPzqygCaUA9Xx0Q",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDg5MDMzLCJleHAiOjE3MDU0OTA4MzN9.k5Ga-MTR4mlwOe6vhWDMpuoRGFS1W476V8LFow2-tiU",
+          "description": ""
+        },
+        {
+          "id": "pair_a3c62c53c4504916a66067a6b5b69fe8",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -332,7 +338,7 @@
     {
       "_id": "req_a776369bec3846febde2ac37e0499f8d",
       "parentId": "fld_f8865439264d4f69bfc432e96bd7abb5",
-      "modified": 1705405565850,
+      "modified": 1705476730482,
       "created": 1703054437831,
       "url": "http://localhost:3000/posts/my-posts/search?userId=657699d0cee7d1a141b625b8&title=Plaza",
       "name": "Get posts by user ID and search by title",
@@ -344,7 +350,7 @@
         {
           "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDA1MjIwLCJleHAiOjE3MDU0MDcwMjB9.C0quszQGC4uWQrVhADn3iJcYKxsCweTtW6ZN7crBE3c",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDc1ODEwLCJleHAiOjE3MDU0Nzc2MTB9.rdh6DuwPEokFcbfnhx7FiEg01Qw4rb8n5d5P5EbrRnE",
           "description": "",
           "disabled": false
         },
@@ -352,6 +358,12 @@
           "name": "Content-Type",
           "value": "application/json",
           "id": "pair_7d622958effa428ca9a1f4d642450893"
+        },
+        {
+          "id": "pair_5fde5ffcb6f04c88b759fb96b2feebe3",
+          "name": "UserRole",
+          "value": "ADMIN",
+          "description": ""
         }
       ],
       "authentication": {},
@@ -400,7 +412,7 @@
     {
       "_id": "req_2bb4352639f5462b93c9721c9813ccb9",
       "parentId": "fld_f8865439264d4f69bfc432e96bd7abb5",
-      "modified": 1705405260059,
+      "modified": 1705476583980,
       "created": 1702983716154,
       "url": "http://localhost:3000/posts/search?title=Plaza",
       "name": "Search by title",
@@ -412,7 +424,7 @@
         {
           "id": "pair_9b62d5308c7b47b78f487c11b6ae1fc0",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDA1MjIwLCJleHAiOjE3MDU0MDcwMjB9.C0quszQGC4uWQrVhADn3iJcYKxsCweTtW6ZN7crBE3c",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDc1ODEwLCJleHAiOjE3MDU0Nzc2MTB9.rdh6DuwPEokFcbfnhx7FiEg01Qw4rb8n5d5P5EbrRnE",
           "description": "",
           "disabled": false
         },
@@ -420,6 +432,12 @@
           "name": "Content-Type",
           "value": "application/json",
           "id": "pair_f81a6cf0824d4dc8af2ee46317ad2480"
+        },
+        {
+          "id": "pair_917dc9456d1646bba62955debe95ba7c",
+          "name": "UserRole",
+          "value": "ADMIN",
+          "description": ""
         }
       ],
       "authentication": {},
@@ -468,9 +486,9 @@
     {
       "_id": "req_101dfb1c6171499e8343bf41993bfb78",
       "parentId": "fld_f8865439264d4f69bfc432e96bd7abb5",
-      "modified": 1705406883041,
+      "modified": 1705490044824,
       "created": 1701838739636,
-      "url": "http://localhost:3000/posts/65a66f75a20aea10a3846464",
+      "url": "http://localhost:3000/posts/65a7b3df206b61eebd6cb8f6",
       "name": "Delete post by ID",
       "description": "",
       "method": "DELETE",
@@ -480,7 +498,13 @@
         {
           "id": "pair_f79275a6171f4a84832d145acde9343b",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDA2MDU3LCJleHAiOjE3MDU0MDc4NTd9.J8xaRuSEoc23yyTWwe7AYfMiyMW9yPzqygCaUA9Xx0Q",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDg5MDMzLCJleHAiOjE3MDU0OTA4MzN9.k5Ga-MTR4mlwOe6vhWDMpuoRGFS1W476V8LFow2-tiU",
+          "description": ""
+        },
+        {
+          "id": "pair_00028c19cb504d6ba347d617872ecbd4",
+          "name": "UserRole",
+          "value": "AUTHOR",
           "description": ""
         }
       ],
@@ -498,15 +522,15 @@
     {
       "_id": "req_6268fb855c6b46be8a5da24a40b19a63",
       "parentId": "fld_f8865439264d4f69bfc432e96bd7abb5",
-      "modified": 1705406655330,
+      "modified": 1705489536936,
       "created": 1701838152445,
-      "url": "http://localhost:3000/posts/65a66f75a20aea10a3846464",
+      "url": "http://localhost:3000/posts/65a7b3f2206b61eebd6cb8f8",
       "name": "Edit post",
       "description": "",
       "method": "PUT",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\t\"title\": \"test\"\n}"
+        "text": "{\n\t\t\"title\": \"test edited 2\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -518,7 +542,13 @@
         {
           "id": "pair_536373964817481e99458b01627f1c3e",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDA2MDU3LCJleHAiOjE3MDU0MDc4NTd9.J8xaRuSEoc23yyTWwe7AYfMiyMW9yPzqygCaUA9Xx0Q",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDg5MDMzLCJleHAiOjE3MDU0OTA4MzN9.k5Ga-MTR4mlwOe6vhWDMpuoRGFS1W476V8LFow2-tiU",
+          "description": ""
+        },
+        {
+          "id": "pair_0dd9e7ec7fd24b91b2adb66c45730de5",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -598,7 +628,7 @@
     {
       "_id": "req_e8b6098b376c46048e150f8ee7d5b098",
       "parentId": "fld_f8865439264d4f69bfc432e96bd7abb5",
-      "modified": 1705405824752,
+      "modified": 1705488364698,
       "created": 1701837623274,
       "url": "http://localhost:3000/posts",
       "name": "Get all posts",
@@ -610,7 +640,13 @@
         {
           "id": "pair_e630db7fcdda428cb21b446f5f9e7085",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDA1MjIwLCJleHAiOjE3MDU0MDcwMjB9.C0quszQGC4uWQrVhADn3iJcYKxsCweTtW6ZN7crBE3c",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDg4MzI3LCJleHAiOjE3MDU0OTAxMjd9.m3ZlCLOtCUePHfoQy-R5FupcXMBrTd48qK7h8DmYBvw",
+          "description": ""
+        },
+        {
+          "id": "pair_7c619db4e8374907a612592b56a99372",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -702,7 +738,7 @@
     {
       "_id": "req_6e53b5bc1e3045bca8181338b4c91aef",
       "parentId": "fld_f8865439264d4f69bfc432e96bd7abb5",
-      "modified": 1705406323832,
+      "modified": 1705489392811,
       "created": 1701836256163,
       "url": "http://localhost:3000/posts/create",
       "name": "Create post",
@@ -722,7 +758,13 @@
         {
           "id": "pair_3b8891beceb044d29a70abf61085aa30",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDA2MDU3LCJleHAiOjE3MDU0MDc4NTd9.J8xaRuSEoc23yyTWwe7AYfMiyMW9yPzqygCaUA9Xx0Q",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDg5MDMzLCJleHAiOjE3MDU0OTA4MzN9.k5Ga-MTR4mlwOe6vhWDMpuoRGFS1W476V8LFow2-tiU",
+          "description": ""
+        },
+        {
+          "id": "pair_fd95eb14d7864648bbab864e619c8654",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -1088,7 +1130,7 @@
     {
       "_id": "req_bcbd5573629047fa956b4f0a1c235e36",
       "parentId": "fld_96f24077daa248ef9d4b666f0617b713",
-      "modified": 1705457111328,
+      "modified": 1705492394110,
       "created": 1682571153417,
       "url": "http://localhost:3000/admin/users?page=1&itemsPerPage=50",
       "name": "Get all users",
@@ -1100,7 +1142,13 @@
         {
           "id": "pair_5bdc6e53c537405ab576897adb151fcd",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDU3MDM2LCJleHAiOjE3MDU0NTg4MzZ9.7RB28JjQCO8SZGQ553OJrkH4M7Jyw_qfymZyNvj-pOY",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDkwNjM4LCJleHAiOjE3MDU0OTI0Mzh9.gMOWRbHLU39iFEdAL40kHnRLvePbQ7BRvrpBQKxMw14",
+          "description": ""
+        },
+        {
+          "id": "pair_457f18af78c24ec4a47dcebcc5838f24",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -1118,9 +1166,9 @@
     {
       "_id": "req_20b06e5f87ab431ba88b7541f4cce3c7",
       "parentId": "fld_96f24077daa248ef9d4b666f0617b713",
-      "modified": 1705457449197,
+      "modified": 1705475943711,
       "created": 1693020823141,
-      "url": "http://localhost:3000/admin/users/65a650b839d3a13eba0399fc",
+      "url": "http://localhost:3000/admin/users/65a77f01290d40834bed5098",
       "name": "Delete user",
       "description": "",
       "method": "DELETE",
@@ -1130,7 +1178,13 @@
         {
           "id": "pair_e7cda09c2be44986a7a1ce6d3ae49005",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDU3MDM2LCJleHAiOjE3MDU0NTg4MzZ9.7RB28JjQCO8SZGQ553OJrkH4M7Jyw_qfymZyNvj-pOY",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDc1ODEwLCJleHAiOjE3MDU0Nzc2MTB9.rdh6DuwPEokFcbfnhx7FiEg01Qw4rb8n5d5P5EbrRnE",
+          "description": ""
+        },
+        {
+          "id": "pair_f36bfbeb480f47569ec6fef77c37793b",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -1148,9 +1202,9 @@
     {
       "_id": "req_38b3c178e9c444c08fa071a842b8c7fe",
       "parentId": "fld_96f24077daa248ef9d4b666f0617b713",
-      "modified": 1705457370173,
+      "modified": 1705475874747,
       "created": 1682660127355,
-      "url": "http://localhost:3000/admin/users/65a650b839d3a13eba0399fc",
+      "url": "http://localhost:3000/admin/users/65a77f01290d40834bed5098",
       "name": "Get user by ID",
       "description": "",
       "method": "GET",
@@ -1160,7 +1214,7 @@
         {
           "id": "pair_0513862d8a5a4cb1a068010782413c6b",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDU3MDM2LCJleHAiOjE3MDU0NTg4MzZ9.7RB28JjQCO8SZGQ553OJrkH4M7Jyw_qfymZyNvj-pOY",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDc1ODEwLCJleHAiOjE3MDU0Nzc2MTB9.rdh6DuwPEokFcbfnhx7FiEg01Qw4rb8n5d5P5EbrRnE",
           "description": ""
         }
       ],
@@ -1295,7 +1349,7 @@
     {
       "_id": "req_caae7094aac74f958e64cc7b1ae44fe5",
       "parentId": "fld_da72aea06a9f4b9aa2050fc3fce9c7c9",
-      "modified": 1705387799301,
+      "modified": 1705490866544,
       "created": 1684732080107,
       "url": "http://localhost:3000/my-events",
       "name": "Get events by user ID",
@@ -1303,7 +1357,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"userId\": \"6481f02ccb5d074e606fbd18\"\n}"
+        "text": "{\n\t\"userId\": \"6481f02ccb5d074e606fbd17\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -1315,7 +1369,13 @@
         {
           "id": "pair_a695ff188c9844348a224144c524a1c7",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxOCIsImVtYWlsIjoiVGFubmVyNTJAeWFob28uY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1Mzg3NzA0LCJleHAiOjE3MDUzODg5MDR9.IPnYpk9yqpfhTWqCKydbVKE2geq7g4ZCUfsW2UyKhdg",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDkwNjM4LCJleHAiOjE3MDU0OTI0Mzh9.gMOWRbHLU39iFEdAL40kHnRLvePbQ7BRvrpBQKxMw14",
+          "description": ""
+        },
+        {
+          "id": "pair_530d3d99997946778618bed9f6540208",
+          "name": "UserRole",
+          "value": "CONS",
           "description": ""
         }
       ],
@@ -1364,9 +1424,9 @@
     {
       "_id": "req_2f047977558e4e128bed872c318da21e",
       "parentId": "fld_da72aea06a9f4b9aa2050fc3fce9c7c9",
-      "modified": 1705387918642,
+      "modified": 1705491132028,
       "created": 1685850907362,
-      "url": "http://localhost:3000/events/65a6275aac09a9c78f841c3e",
+      "url": "http://localhost:3000/events/65a7b90df7daefb2074346fb",
       "name": "Delete event by ID",
       "description": "",
       "method": "DELETE",
@@ -1376,7 +1436,13 @@
         {
           "id": "pair_9373cbaa1e2a4e80a42a630a11a93615",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxOCIsImVtYWlsIjoiVGFubmVyNTJAeWFob28uY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1Mzg3NzA0LCJleHAiOjE3MDUzODg5MDR9.IPnYpk9yqpfhTWqCKydbVKE2geq7g4ZCUfsW2UyKhdg",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDkwNjM4LCJleHAiOjE3MDU0OTI0Mzh9.gMOWRbHLU39iFEdAL40kHnRLvePbQ7BRvrpBQKxMw14",
+          "description": ""
+        },
+        {
+          "id": "pair_04bb10ff17114493b222761ee8b63590",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -1394,15 +1460,15 @@
     {
       "_id": "req_25cd563d548f4bfb94e22f95194249f5",
       "parentId": "fld_da72aea06a9f4b9aa2050fc3fce9c7c9",
-      "modified": 1705386721195,
+      "modified": 1705491026465,
       "created": 1683875187980,
-      "url": "http://localhost:3000/events/65a6227544e51bc15f2e76ff",
+      "url": "http://localhost:3000/events/65a7b915f7daefb2074346fd",
       "name": "Edit event",
       "description": "",
       "method": "PUT",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\t\"title\": \"Test edited\",\n\t\t\"broadcastLinkId\": \"yTmd8hxAvcU\"\n}\n"
+        "text": "{\n\t\t\"title\": \"Test edited 2\",\n\t\t\"broadcastLinkId\": \"yTmd8hxAvcU\"\n}\n"
       },
       "parameters": [],
       "headers": [
@@ -1414,7 +1480,13 @@
         {
           "id": "pair_7a7b2f2f04f046558623209c09fef40b",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1Mzg1NzY1LCJleHAiOjE3MDUzODY5NjV9.FVTqg_zM10af_R8tC3tgr_uO0EbVsdYAI8Q0mBEApGo",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDkwNjM4LCJleHAiOjE3MDU0OTI0Mzh9.gMOWRbHLU39iFEdAL40kHnRLvePbQ7BRvrpBQKxMw14",
+          "description": ""
+        },
+        {
+          "id": "pair_ec951eca38874b2f8ca3da59712485a7",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -1432,7 +1504,7 @@
     {
       "_id": "req_0d8ad20111864ba4ab4031afdebf99ec",
       "parentId": "fld_da72aea06a9f4b9aa2050fc3fce9c7c9",
-      "modified": 1705389133094,
+      "modified": 1705490707287,
       "created": 1683873654981,
       "url": "http://localhost:3000/events/create",
       "name": "Create event",
@@ -1452,7 +1524,13 @@
         {
           "id": "pair_a041308db56543e7b29ecf1328a9ed20",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1Mzg5MDk4LCJleHAiOjE3MDUzOTAyOTh9.dCwSKCF22YLXN9oMXrWDcNFNwuLbErvFrdVsLL0TxzE",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDkwNjM4LCJleHAiOjE3MDU0OTI0Mzh9.gMOWRbHLU39iFEdAL40kHnRLvePbQ7BRvrpBQKxMw14",
+          "description": ""
+        },
+        {
+          "id": "pair_724890e92817448ba600caa429247612",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -1555,7 +1633,7 @@
     {
       "_id": "req_fa9cd17692464e9a8fbb3275128d19c5",
       "parentId": "fld_89665f5dc6f44bf29a2ba9d95bd0696f",
-      "modified": 1705389406066,
+      "modified": 1705491897129,
       "created": 1683878054365,
       "url": "http://localhost:3000/lots/create",
       "name": "Create lot",
@@ -1575,7 +1653,13 @@
         {
           "id": "pair_a2f63ea4d314449aa272aedb560d783f",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1Mzg5MDk4LCJleHAiOjE3MDUzOTAyOTh9.dCwSKCF22YLXN9oMXrWDcNFNwuLbErvFrdVsLL0TxzE",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDkwNjM4LCJleHAiOjE3MDU0OTI0Mzh9.gMOWRbHLU39iFEdAL40kHnRLvePbQ7BRvrpBQKxMw14",
+          "description": ""
+        },
+        {
+          "id": "pair_194b9e97c1a8480e938758c0a140a427",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -1593,9 +1677,9 @@
     {
       "_id": "req_2dcda27dfd1f4c70946a77758b98774a",
       "parentId": "fld_89665f5dc6f44bf29a2ba9d95bd0696f",
-      "modified": 1705396408891,
+      "modified": 1705491956495,
       "created": 1683878054369,
-      "url": "http://localhost:3000/lots/65a62d609c6babf3a3cf609e",
+      "url": "http://localhost:3000/lots/65a7bdb3e6f44afb1a3831c1",
       "name": "Edit lot",
       "description": "",
       "method": "PUT",
@@ -1613,7 +1697,13 @@
         {
           "id": "pair_3823da5671814a5da5778e81ba62609a",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1Mzk2Mzk2LCJleHAiOjE3MDUzOTc1OTZ9.EPSKZX51jIOns1HoRyFNy47gU-RBNhuYKhlD-9vs51g",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDkwNjM4LCJleHAiOjE3MDU0OTI0Mzh9.gMOWRbHLU39iFEdAL40kHnRLvePbQ7BRvrpBQKxMw14",
+          "description": ""
+        },
+        {
+          "id": "pair_4fcc7cd0c806437484effc163c359cf6",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
@@ -1631,9 +1721,9 @@
     {
       "_id": "req_efb4f9b9cb2748e69fb866e62a03371f",
       "parentId": "fld_89665f5dc6f44bf29a2ba9d95bd0696f",
-      "modified": 1705396513643,
+      "modified": 1705492042956,
       "created": 1685858758590,
-      "url": "http://localhost:3000/lots/65a62d609c6babf3a3cf609e",
+      "url": "http://localhost:3000/lots/65a7bdbae6f44afb1a3831c3",
       "name": "Delete lot by ID",
       "description": "",
       "method": "DELETE",
@@ -1643,7 +1733,13 @@
         {
           "id": "pair_beef7180a40e4b9bb1f02c8616763a24",
           "name": "Authorization",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1Mzk2Mzk2LCJleHAiOjE3MDUzOTc1OTZ9.EPSKZX51jIOns1HoRyFNy47gU-RBNhuYKhlD-9vs51g",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODFmMDJjY2I1ZDA3NGU2MDZmYmQxNyIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwidHlwZSI6IkNPTlNVTUVSIiwiaWF0IjoxNzA1NDkwNjM4LCJleHAiOjE3MDU0OTI0Mzh9.gMOWRbHLU39iFEdAL40kHnRLvePbQ7BRvrpBQKxMw14",
+          "description": ""
+        },
+        {
+          "id": "pair_1f5b2bbed2de4312beb6d68b2ef05738",
+          "name": "UserRole",
+          "value": "ADMIN",
           "description": ""
         }
       ],
