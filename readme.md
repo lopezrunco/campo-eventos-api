@@ -23,4 +23,7 @@ npm run seed
 
 # Start API
 npm start
+
+# Run test
+npm test
 ```
