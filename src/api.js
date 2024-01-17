@@ -28,8 +28,8 @@ app.use(express.json()) // Understand the JSON sent by the API
 // -------------------------------------------------------------------------------------------------- //
 
 // Security
-const refresh = require('./controllers/auth/refresh')
-const enableMfa = require('./controllers/auth/enable-mfa')
+const refresh = require('./controllers/auth/refresh') // TO DO: Apply this on all users
+const enableMfa = require('./controllers/auth/enable-mfa') // TO DO: Apply this on Super users
 
 // Users
 const login = require('./controllers/user/login')
