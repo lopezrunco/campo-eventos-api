@@ -93,10 +93,10 @@ const getAdsByPosition = require('./controllers/ad/get-by-position')
 // Users
 app.post('/login', login)
 app.post('/register', register)
-app.put('/user/:id/update', updateUser)
-app.get('/admin/users', getAllUsers)
-app.get('/admin/users/:id', getUserById)
-app.delete('/admin/users/:id', deleteUser)
+app.put('/user/:id/update', checkUserCredentials(), updateUser)
+app.get('/admin/users', checkUserCredentials(), getAllUsers)
+app.get('/admin/users/:id', checkUserCredentials(), getUserById)
+app.delete('/admin/users/:id', checkUserCredentials(), deleteUser)
 
 // Posts
 app.get('/posts/search', checkUserCredentials(), searchByTitle)
