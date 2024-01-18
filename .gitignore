@@ -1,5 +1,3 @@
 node_modules
 .env
 assets
-
-src/middlewares/check-user-credentials.test.js
