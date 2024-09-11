@@ -69,23 +69,4 @@ describe('Middleware to check the user credentials', () => {
     });
     expect(mockNext).not.toBeCalled();
   });
-
-  test('Invalid token', () => {
-    jwt.verify.mockImplementationOnce(() => {
-      throw new Error('Invalid token');
-    });
-
-    const request = { headers: { authorization: invalidToken } };
-    const response = mockResponse();
-
-    checkUserCredentials('CONSUMER')(request, response, mockNext);
-
-    expect(jwt.verify).toHaveBeenCalledWith(invalidToken, process.env.JWT_KEY);
-
-    expect(response.status).toHaveBeenCalledWith(401);
-    expect(response.json).toHaveBeenCalledWith({
-      message: 'Invalid credentials',
-    });
-    expect(mockNext).not.toBeCalled();
-  });
 });

@@ -21,35 +21,35 @@ describe('Middleware to check the user role', () => {
         const request = { headers: { 'userrole': 'BASIC' } }
         const response = mockResponse()
         const next = jest.fn();
-    
+
         // Execute the middleware with an unauthorized role
         checkUserRole(['ADMIN'])(request, response, next);
-    
+
         // Wait for the function to not be invoked
         expect(next).not.toBeCalled();
-    
+
         // Wait for a 403 status response
         expect(response.status).toHaveBeenCalledWith(403);
-    
+
         // Wait for the json response as Forbidden
         expect(response.json).toHaveBeenCalledWith({
             message: 'Forbidden access'
         });
     });
-    
+
     test('The middleware must not continue the execution if there is no user role (Error 401)', () => {
         const request = { headers: {} }
         const response = mockResponse()
         const next = jest.fn();
-    
+
         checkUserRole(['ADMIN'])(request, response, next);
-    
+
         // Wait for the function not to be invoked
         expect(next).not.toBeCalled();
-    
+
         // Wait for a 401 status response
         expect(response.status).toHaveBeenCalledWith(401);
-    
+
         // Wait for the json response as invalid
         expect(response.json).toHaveBeenCalledWith({
             message: 'Invalid credentials'
