@@ -1,5 +1,7 @@
 # API REST with Express framework
 
+This project serves as the backbone for the CampoEventos web app, providing users with access to live-streamed livestock auctions and the ability to make pre-auction offers.
+
 ## Instructions
 
 This project serves as the backbone for the CampoEventos web app, providing users with access to live-streamed livestock auctions and the ability to make pre-auction offers.
