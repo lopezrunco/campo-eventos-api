@@ -2,6 +2,8 @@
 
 ## Instructions
 
+This project serves as the backbone for the CampoEventos web app, providing users with access to live-streamed livestock auctions and the ability to make pre-auction offers.
+
 Create .env file with the environment variables
 
 ```bash
