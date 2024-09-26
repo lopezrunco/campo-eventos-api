@@ -1,4 +1,6 @@
 const Joi = require('joi')
+
+const youtubeUrlSchema = require('../../validators/youtubeValidator')
 const { eventModel } = require('../../models/event')
 
 module.exports = (request, response) => {
@@ -45,10 +47,7 @@ module.exports = (request, response) => {
             .allow(null, ''),
         startBroadcastTimestamp: Joi.date()
             .required(),
-        broadcastLinkId: Joi.string()
-            .allow(null, '')
-            .min(2)
-            .max(50),
+        broadcastLinkId: youtubeUrlSchema,
         externalLink: Joi.string()
             .allow(null, '')
             .min(2)
