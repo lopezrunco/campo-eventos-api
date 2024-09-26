@@ -6,9 +6,9 @@ const express = require('express')
 const cors = require('cors')
 
 const getDbConnectionString = require('./utils/get-db-connection-string')
-const routes = require('./routes')
-
 mongoose.plugin(mongooseToJson) // Loads the mongooseToJson plugin in mongoose.
+
+const routes = require('./routes')
 
 const app = express()
 
